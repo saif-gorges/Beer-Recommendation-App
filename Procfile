@@ -1,0 +1,1 @@
+web: gunicorn Toronto-Analysis-Heroku.app:app
