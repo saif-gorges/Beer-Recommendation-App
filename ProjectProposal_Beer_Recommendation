@@ -11,10 +11,35 @@ Our state-of-the-art beer recommendation app will tell you and your friend’s w
 Using machine learning technology, our system will source hundreds of beers and recommend you the best beer for your taste based on aroma, appearance, flavour, and texture. 
 Now you do not have to ask anybody for their “human” recommendations! 
 
+Data Source
+Data Crawling from RateBeer, https://www.ratebeer.com - One of the biggest beer review website -.
+- Columns: user_id, beer_name, date, average_rating, aroma, appearance,flavor, mouthfeel, overall
+
+Beer Exploratory Data Analysis
+- Calculating the total score of each beer
+- Clustering and visualization
+- Beer score histogram
+- Evaluation Factior BoxPlot
+- Beer rating over time
+
+Beer Recommendation System
+1. Build a Beer recommendation system based on their similarity
+ex -> Recommend top 5 beer that is similar to Stella
+
+2. Build a Beer recommendation system based on one person's rating (id)
+ex -> if one person(id: 1234) has been rating some beer reviews, a personal recommendation system is created based on those review(Personal taste)
+
+3. Build a Beer recommendation system based on "Top-N" list
+
+
 Goal
 Create a webapp that will take user input based on aroma, appearance, flavour, texture and recommend an appropriate beer based on those parameters. 
 Tools and Programming Languages
 ·        Python
+·        Pandas
+·        BeautifulSoup
+·        Flask
 ·        HTML/CSS
+·        JavaScript
 ·        Machine Learning
-·        Power BI
+·        Power BI or Tableau
