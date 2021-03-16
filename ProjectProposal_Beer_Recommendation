@@ -33,7 +33,8 @@ ex -> if one person(id: 1234) has been rating some beer reviews, a personal reco
 
 
 Goal
-Create a webapp that will display Exploratory Data Analysis about the beer ratings data and will take user input based on aroma, appearance, flavour, texture and recommend an appropriate beer based on those parameters. 
+Create a webapp that will display Exploratory Data Analysis about the beer ratings data and will take user input based on aroma, appearance, flavour, 
+texture and recommend an appropriate beer based on those parameters. 
 
 Tools and Programming Languages
 ·        Python
