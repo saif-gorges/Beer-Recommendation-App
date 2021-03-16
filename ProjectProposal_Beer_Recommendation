@@ -1,17 +1,17 @@
-## Beer Recommendation App
-### Team Members
+Beer Recommendation App
+Team Members
 ·        Dong Yi Kim
 ·        Saloni Gupta
 ·        Sooyeon Kim
 ·        Saif Gorges
 
-## Proposal
+Proposal
 Do you like beer? Do your friends like beer? Do you like making your friends feel bad about their choice of beer? Well look no further, we have the solution for you!
 Our state-of-the-art beer recommendation app will tell you and your friend’s which beers to drink, so you can stop arguing about beer and just enjoy the night!
 Using machine learning technology, our system will source hundreds of beers and recommend you the best beer for your taste based on aroma, appearance, flavour, and texture. 
 Now you do not have to ask anybody for their “human” recommendations! 
 
-## Goal
+Goal
 Create a webapp that will take user input based on aroma, appearance, flavour, texture and recommend an appropriate beer based on those parameters. 
 Tools and Programming Languages
 ·        Python
