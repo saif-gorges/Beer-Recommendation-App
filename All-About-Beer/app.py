@@ -53,6 +53,18 @@ def recommend_a():
     # show the form, it wasn't submitted
     return render_template('reco-sys-a.html')
 
+@app.route('/recommend_b', methods=['GET', 'POST'])
+def recommend_b():
+    if request.method == 'POST':
+        # do stuff when the form is submitted
+
+        # redirect to end the POST handling
+        # the redirect can be to the same route or somewhere else
+        return redirect(url_for('index'))
+
+    # show the form, it wasn't submitted
+    return render_template('reco-sys-b.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
