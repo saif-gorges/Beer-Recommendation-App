@@ -72,7 +72,7 @@
           <li class="dropdown"><a href="{{ url_for('home') }}#portfolio"><span>Beer Recommendation</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ url_for('recommend_a') }}">Based on Similarity</a></li>
-              <li><a href="{{ url_for('recommend_a') }}">Based on Personal Ratings</a></li>
+              <li><a href="{{ url_for('recommend_b') }}">Based on Personal Ratings</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="{{ url_for('home') }}#team">Team</a></li>
@@ -92,11 +92,11 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Beer Recommendation Based on Similarity</h2>
+          <h2>Beer Recommendation Based on Personal Ratings</h2>
           <ol>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('home') }}#portfolio">Beer Recommendation</a></li>
-            <li>Based on Similarity</li>
+            <li>Based on Personal Ratings</li>
           </ol>
         </div>
 
@@ -114,7 +114,7 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="static/img/recommendation/recommendation-a.jpg" alt="">
+                  <img src="static/img/recommendation/recommendation-b.jpg" alt="">
                 </div>
 
                 <!-- <div class="swiper-slide">
