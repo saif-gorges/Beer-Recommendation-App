@@ -1,0 +1,1785 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0217.1203                               -->
+<workbook source-build='2020.4.2 (20204.21.0217.1203)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='final_data' inline='true' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='final_data' name='textscan.0br0dg00ozf9je14ojo4s0qt7aky'>
+            <connection class='textscan' directory='C:/Users/DongYi/Documents/GitHub/Beer-Recommendation-App/All-About-Beer/data' filename='final_data.csv' password='' port='0' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0br0dg00ozf9je14ojo4s0qt7aky' name='final_data.csv' table='[final_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='beer_name' ordinal='1' />
+            <column datatype='string' name='user' ordinal='2' />
+            <column datatype='integer' name='aroma' ordinal='3' />
+            <column datatype='integer' name='appearance' ordinal='4' />
+            <column datatype='integer' name='flavor' ordinal='5' />
+            <column datatype='integer' name='mouthfeel' ordinal='6' />
+            <column datatype='integer' name='overall' ordinal='7' />
+            <column datatype='real' name='rating' ordinal='8' />
+            <column datatype='date' name='date' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0br0dg00ozf9je14ojo4s0qt7aky' name='final_data.csv' table='[final_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='beer_name' ordinal='1' />
+            <column datatype='string' name='user' ordinal='2' />
+            <column datatype='integer' name='aroma' ordinal='3' />
+            <column datatype='integer' name='appearance' ordinal='4' />
+            <column datatype='integer' name='flavor' ordinal='5' />
+            <column datatype='integer' name='mouthfeel' ordinal='6' />
+            <column datatype='integer' name='overall' ordinal='7' />
+            <column datatype='real' name='rating' ordinal='8' />
+            <column datatype='date' name='date' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>beer_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[beer_name]</local-name>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias>beer_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[user]</local-name>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias>user</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>aroma</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[aroma]</local-name>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias>aroma</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appearance</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[appearance]</local-name>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias>appearance</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flavor</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flavor]</local-name>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias>flavor</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mouthfeel</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[mouthfeel]</local-name>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias>mouthfeel</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>overall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[overall]</local-name>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias>overall</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[final_data.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' datatype='integer' name='[Aroma(구간차원)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[aroma]' peg='0' size='1.424' />
+      </column>
+      <column caption='calculated_field' datatype='integer' name='[Calculation_564357350697119744]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='final_data.csv' datatype='table' name='[__tableau_internal_object_id__].[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]' role='measure' type='quantitative' />
+      <column caption='Appearance' datatype='integer' name='[appearance]' role='measure' type='quantitative' />
+      <column caption='Aroma' datatype='integer' name='[aroma]' role='measure' type='quantitative' />
+      <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Flavor' datatype='integer' name='[flavor]' role='measure' type='quantitative' />
+      <column caption='Mouthfeel' datatype='integer' name='[mouthfeel]' role='measure' type='quantitative' />
+      <column caption='Beer Score' datatype='integer' name='[overall]' role='measure' type='quantitative' />
+      <column caption='Rating' datatype='real' name='[rating]' role='measure' type='quantitative' />
+      <column caption='User' datatype='string' name='[user]' role='dimension' type='nominal' />
+      <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[appearance]' derivation='Sum' name='[sum:appearance:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[aroma]' derivation='Sum' name='[sum:aroma:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[flavor]' derivation='Sum' name='[sum:flavor:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mouthfeel]' derivation='Sum' name='[sum:mouthfeel:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[overall]' derivation='Sum' name='[sum:overall:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[rating]' derivation='Sum' name='[sum:rating:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/DongYi/Documents/GitHub/Beer-Recommendation-App/All-About-Beer/data/final_data_tableau_Extract.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='03/18/2021 06:28:57 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='final_data' increment-value='%null%' refresh-type='create' rows-inserted='91776' timestamp-start='2021-03-18 18:28:57.611' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>final_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>91776</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>beer_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[beer_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>beer_name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>final_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>135</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[user]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>user</remote-alias>
+              <ordinal>2</ordinal>
+              <family>final_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17951</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>aroma</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[aroma]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>aroma</remote-alias>
+              <ordinal>3</ordinal>
+              <family>final_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>appearance</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[appearance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>appearance</remote-alias>
+              <ordinal>4</ordinal>
+              <family>final_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flavor</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flavor]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flavor</remote-alias>
+              <ordinal>5</ordinal>
+              <family>final_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mouthfeel</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[mouthfeel]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mouthfeel</remote-alias>
+              <ordinal>6</ordinal>
+              <family>final_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>overall</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[overall]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>overall</remote-alias>
+              <ordinal>7</ordinal>
+              <family>final_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rating</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rating</remote-alias>
+              <ordinal>8</ordinal>
+              <family>final_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>46</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>9</ordinal>
+              <family>final_data.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>17007</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_data.csv_9992B42DEBC44EFCB81EEE756BED0614]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' palette='purple_pink_gray_10_0' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9]&quot;</bucket>
+            </map>
+            <map to='#8074a8'>
+              <bucket>&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:appearance:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:overall:qk]&quot;</bucket>
+            </map>
+            <map to='#c46487'>
+              <bucket>&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:flavor:qk]&quot;</bucket>
+            </map>
+            <map to='#c6c1f0'>
+              <bucket>&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:aroma:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:rating:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbed1'>
+              <bucket>&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:mouthfeel:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:beer_name:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;BrewDog / Weihenstephan India Pale Weizen&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Flying Monkeys 12 Minutes to Destiny&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Mickeys Fine Malt Liquor&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Shawn &amp; Ed Lagershed Original&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Alexander Keith&apos;s India Pale Ale&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;DAB Original&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Kozel Cern� (Dark)&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Paradox Beer Candid Kaiser - American Style Pale Ale&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Unibroue La Fin du Monde&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Bellwoods Bring Out Your Dead&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Driftwood Fat Tug IPA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Maclay&apos;s Traditional Pale Ale&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Rickard&apos;s Red&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Weihenstephaner Hefeweissbier&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Budweiser&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Guinness Draught&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Molson Carling Light&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Stella Artois&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Bud Light&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Four Winds Nectarous&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Midnight Sun M&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Sleeman Clear 2.0&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Bellwoods Jelly King (Raspberry and Blackberry)&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Driftwood Sartori Harvest IPA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Mad Jack Apple Lager&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Samuel Smiths Organic Lager&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Wellington Special Pale Ale SPA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Corona Extra&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Kirin Ichiban&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Nickel Brook Glory &amp; Gold&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Tsingtao Beer Quality Series (Taiwan)&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Baltika 7 Eksportnoe (Export)&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Dieu du Ciel! P�ch� Mortel (Bourbon)&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Krombacher Pils&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Paulaner Oktoberfest Bier (Wiesn Bier)&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Unibroue Trois Pistoles&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Chang Beer&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Hoegaarden Ros�e&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Närke Kaggen Stormaktsporter&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Tiger Beer&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Berthold Keller Premium Lager&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Erdinger Weissbier&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Maisel &amp; Friends Marc&apos;s Chocolate Bock&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;San Miguel&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Wissey Valley Golden Rivet&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Caledon Hills Helles&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Harp Lager&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Moosehead Pale Ale&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Superstition Berry White&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Cantillon Vin Jaune&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Heineken&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Muskoka Cream Ale&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Tatra Jasne Pelne / Pils / Beer&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Cool Beer Blonde Lager&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Innis &amp; Gunn The Original&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Newcastle Brown Ale (Non-US Version)&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Toppling Goliath Kentucky Brunch&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Creemore Springs Premium Lager&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Kona Big Wave Golden Ale&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Old Milwaukee&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Unibroue 17 Grande R�serve (Rhum &amp; Cognac)&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Bud Light Apple&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Goose Island IPA Now&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mill Street Original Organic Lager&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Smithwick&apos;s Ale / Draught&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Boxer Ice&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Estrella Damm (5.4\%)&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Michelob Ultra&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sapporo Premium Beer / Draft Beer&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Zubr&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Bavaria 8.6 (Original)&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Dos Equis XX Special Lager&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kronenbourg 1664 Blanc&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Peroni&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Walkerville Classic Amber Lager&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Carlsberg Pilsner&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Hoegaarden Grand Cru&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Muskoka Mad Tom IPA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;The Twisted Hop Tears... in Rain: Glitter in the Dark&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Bud Light Lime&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Great Lakes Brewery Canuck Pale Ale&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Miller Lite&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Steam Whistle Pilsner&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Beck&apos;s&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Dragon Stout&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;MacKinnon Brothers Red Fox&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Pilsner Urquell&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Waterloo IPA&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;캐나다&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='final_data.csv' id='final_data.csv_9992B42DEBC44EFCB81EEE756BED0614'>
+            <properties context=''>
+              <relation connection='textscan.0br0dg00ozf9je14ojo4s0qt7aky' name='final_data.csv' table='[final_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='beer_name' ordinal='1' />
+                  <column datatype='string' name='user' ordinal='2' />
+                  <column datatype='integer' name='aroma' ordinal='3' />
+                  <column datatype='integer' name='appearance' ordinal='4' />
+                  <column datatype='integer' name='flavor' ordinal='5' />
+                  <column datatype='integer' name='mouthfeel' ordinal='6' />
+                  <column datatype='integer' name='overall' ordinal='7' />
+                  <column datatype='real' name='rating' ordinal='8' />
+                  <column datatype='date' name='date' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Appearance'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontsize='12'>&lt;</run>
+            <run fontalignment='1' fontsize='12'>Sheet Name</run>
+            <run fontalignment='1' fontsize='12'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_data' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a1hd2t05iyqic14ockhx1kzzmb9'>
+            <column caption='Appearance' datatype='integer' name='[appearance]' role='measure' type='quantitative' />
+            <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+            <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[appearance]' derivation='Sum' name='[sum:appearance:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:appearance:qk]' scope='rows' value='Score' />
+            <encoding attr='space' class='0' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:appearance:qk]' field-type='quantitative' major-origin='0' major-spacing='5000' max='25000' min='0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='refboxplot'>
+            <format attr='palette' id='refline0' value='bp_brightblue' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:appearance:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:appearance:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+                <format attr='mark-color' value='#b07aa1' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='636' />
+                <format attr='maxheight' value='636' />
+                <format attr='minwidth' value='60' />
+                <format attr='maxwidth' value='60' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:appearance:qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{B0A20183-EFD2-4A0F-9597-EE2CE4748871}' />
+    </worksheet>
+    <worksheet name='Aroma'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontsize='12'>&lt;</run>
+            <run fontalignment='1' fontsize='12'>Sheet Name</run>
+            <run fontalignment='1' fontsize='12'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_data' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a1hd2t05iyqic14ockhx1kzzmb9'>
+            <column caption='Aroma' datatype='integer' name='[aroma]' role='measure' type='quantitative' />
+            <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+            <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[aroma]' derivation='Sum' name='[sum:aroma:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:aroma:qk]' field-type='quantitative' major-origin='0' major-spacing='5000' max='25000' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:aroma:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='refboxplot'>
+            <format attr='palette' id='refline0' value='bp_grayblue' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:aroma:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:aroma:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+                <format attr='mark-color' value='#d37295' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:aroma:qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{9EDF4E0B-273C-451D-BBA3-5C568F6B6A03}' />
+    </worksheet>
+    <worksheet name='Beer Score over time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Arial' fontsize='18'>&lt;</run>
+            <run fontalignment='1' fontname='Arial' fontsize='18'>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]</run>
+            <run fontalignment='1' fontname='Arial' fontsize='18'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_data' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a1hd2t05iyqic14ockhx1kzzmb9'>
+            <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+            <column caption='Beer Score' datatype='integer' name='[overall]' role='measure' type='quantitative' />
+            <column-instance column='[overall]' derivation='Sum' name='[sum:overall:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year-Trunc' name='[tyr:date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]'>
+            <groupfilter function='member' level='[none:beer_name:nk]' member='&quot;Bavaria 8.6 (Original)&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='132' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:overall:qk]</rows>
+        <cols>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[tyr:date:qk]</cols>
+      </table>
+      <simple-id uuid='{96379852-CD07-447C-8111-0C093153D43A}' />
+    </worksheet>
+    <worksheet name='Flavor'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontsize='12'>&lt;</run>
+            <run fontalignment='1' fontsize='12'>Sheet Name</run>
+            <run fontalignment='1' fontsize='12'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_data' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a1hd2t05iyqic14ockhx1kzzmb9'>
+            <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+            <column caption='Flavor' datatype='integer' name='[flavor]' role='measure' type='quantitative' />
+            <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[flavor]' derivation='Sum' name='[sum:flavor:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:flavor:qk]' field-type='quantitative' major-origin='0' major-spacing='5000' max='25000' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:flavor:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='refboxplot'>
+            <format attr='fill-color' id='refline0' value='#f0f0f0d9' />
+            <format attr='palette' id='refline0' value='bp_purple' />
+            <format attr='opacity' id='refline0' value='147' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:flavor:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:flavor:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+                <format attr='mark-color' value='#ff9da7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:flavor:qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{6912DA5E-D1F8-4E55-813D-13D3192C6165}' />
+    </worksheet>
+    <worksheet name='Mouthfeel'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontsize='12'>&lt;</run>
+            <run fontalignment='1' fontsize='12'>Sheet Name</run>
+            <run fontalignment='1' fontsize='12'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_data' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a1hd2t05iyqic14ockhx1kzzmb9'>
+            <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+            <column caption='Mouthfeel' datatype='integer' name='[mouthfeel]' role='measure' type='quantitative' />
+            <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[mouthfeel]' derivation='Sum' name='[sum:mouthfeel:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:mouthfeel:qk]' field-type='quantitative' major-origin='0' major-spacing='5000' max='25000' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:mouthfeel:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='refboxplot'>
+            <format attr='palette' id='refline0' value='bp_blue' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:mouthfeel:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:mouthfeel:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+                <format attr='mark-color' value='#c290b4' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:mouthfeel:qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{E4E306AA-81E1-4B84-8063-8B77D6DECB0B}' />
+    </worksheet>
+    <worksheet name='Taste Score'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='18'>&lt;</run>
+            <run bold='true' fontalignment='1' fontsize='18'>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]</run>
+            <run bold='true' fontalignment='1' fontsize='18'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_data' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a1hd2t05iyqic14ockhx1kzzmb9'>
+            <column caption='Appearance' datatype='integer' name='[appearance]' role='measure' type='quantitative' />
+            <column caption='Aroma' datatype='integer' name='[aroma]' role='measure' type='quantitative' />
+            <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+            <column caption='Flavor' datatype='integer' name='[flavor]' role='measure' type='quantitative' />
+            <column caption='Mouthfeel' datatype='integer' name='[mouthfeel]' role='measure' type='quantitative' />
+            <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[appearance]' derivation='Sum' name='[sum:appearance:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[aroma]' derivation='Sum' name='[sum:aroma:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[flavor]' derivation='Sum' name='[sum:flavor:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mouthfeel]' derivation='Sum' name='[sum:mouthfeel:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:appearance:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:aroma:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:flavor:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:mouthfeel:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]'>
+            <groupfilter function='member' level='[none:beer_name:nk]' member='&quot;Budweiser&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]</column>
+            <column>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[Multiple Values]' scope='rows' value='Score' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[:Measure Names]' value='107' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[:Measure Names]' value='Measure Name'>
+              <formatted-text>
+                <run>Measure Name</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='173' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[Multiple Values]</rows>
+        <cols>([federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk] / [federated.0a1hd2t05iyqic14ockhx1kzzmb9].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{325EFC9F-71A9-41A4-B490-9BD181F1AB7B}' />
+    </worksheet>
+    <worksheet name='Top10 Beer Score over time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Arial' fontsize='20'>Top 10 Highest Scored Beer</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_data' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a1hd2t05iyqic14ockhx1kzzmb9'>
+            <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+            <column caption='Beer Score' datatype='integer' name='[overall]' role='measure' type='quantitative' />
+            <column-instance column='[overall]' derivation='Sum' name='[sum:overall:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([overall])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:beer_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' />
+              <lod column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[sum:overall:qk]</rows>
+        <cols>[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[yr:date:ok]</cols>
+      </table>
+      <simple-id uuid='{3A4B74BE-4586-4858-97D2-3333589DCC2B}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Beer Analysis' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>BEER REVIEW ANALYSIS</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98340' id='1' param='vert' removable='false' w='98426' x='787' y='830'>
+            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='5187' id='3' w='98426' x='787' y='830' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' w='98426' x='787' y='6017' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='82676' id='5' paired-zone-id='4' removable='false' w='98426' x='787' y='16494'>
+              <flipboard active-id='3' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Beer Review Score History' captured-sheet='Beer Score Over Time' id='1'>
+                    <capturedDeltas>
+                      <worksheet name='Beer Score over time'>
+                        <filter class='categorical' column='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]'>
+                          <groupfilter function='member' level='[none:beer_name:nk]' member='&quot;Bud Light&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Key Elements Evaluation ' captured-sheet='Beer Elements ' id='2' />
+                  <story-point caption='Top 10 Highest Scored Beer' captured-sheet='Top10 Beer Score' id='5' />
+                  <story-point caption='Key Elements Boxplot ' captured-sheet='Tastes Boxplot' id='3' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{3FAF5381-90D8-44E5-887C-C73E5EEB9529}' />
+    </dashboard>
+    <dashboard name='Beer Elements '>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='final_data' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0a1hd2t05iyqic14ockhx1kzzmb9'>
+        <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+        <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='7' param='horz' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='5' w='82400' x='800' y='1000'>
+              <zone h='98000' id='3' name='Taste Score' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' w='16000' x='83200' y='1000'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8750' id='8' mode='dropdown' name='Taste Score' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='16750' id='9' name='Taste Score' pane-specification-id='0' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[:Measure Names]' w='16000' x='83200' y='9750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='15' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='14' param='vert' w='84000' x='8000' y='8000'>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8750' id='8' mode='dropdown' name='Taste Score' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Taste Score' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='16750' id='9' name='Taste Score' pane-specification-id='0' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[:Measure Names]' w='16000' x='83200' y='9750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{DF52B92E-63F9-48B4-A485-7DECB60B0EE3}' />
+    </dashboard>
+    <dashboard name='Beer Score Over Time'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='final_data' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0a1hd2t05iyqic14ockhx1kzzmb9'>
+        <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+        <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='7' param='horz' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='5' w='82400' x='800' y='1000'>
+              <zone h='98000' id='3' name='Beer Score over time' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' w='16000' x='83200' y='1000'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8750' id='8' mode='dropdown' name='Beer Score over time' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='14' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='13' param='vert' w='84000' x='8000' y='8000'>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8750' id='8' mode='dropdown' name='Beer Score over time' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Beer Score over time' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{AE2B2A5F-464C-4D16-A2D2-BD7DE6AE66A0}' />
+    </dashboard>
+    <dashboard name='Tastes Boxplot'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' preset-index='1' sizing-mode='fixed' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone h='98000' id='3' name='Appearance' w='24599' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='98000' id='5' name='Aroma' w='24599' x='50000' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='98000' id='6' name='Flavor' w='24601' x='74599' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='98000' id='7' name='Mouthfeel' w='24601' x='25399' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1200' minheight='1200' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='13' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='12' param='vert' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Appearance' w='24599' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98000' id='7' is-fixed='true' name='Mouthfeel' w='24601' x='25399' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98000' id='5' is-fixed='true' name='Aroma' w='24599' x='50000' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98000' id='6' is-fixed='true' name='Flavor' w='24601' x='74599' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{EB192C41-4C37-4C0C-8D94-9486620FCB1F}' />
+    </dashboard>
+    <dashboard name='Top10 Beer Score'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='final_data' name='federated.0a1hd2t05iyqic14ockhx1kzzmb9' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0a1hd2t05iyqic14ockhx1kzzmb9'>
+        <column caption='Beer Name' datatype='string' name='[beer_name]' role='dimension' type='nominal' />
+        <column-instance column='[beer_name]' derivation='None' name='[none:beer_name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='7' param='horz' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='5' w='82400' x='800' y='1000'>
+              <zone h='98000' id='3' name='Top10 Beer Score over time' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' w='16000' x='83200' y='1000'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='22250' id='8' mode='checkdropdown' name='Top10 Beer Score over time' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' values='relevant' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='35500' id='9' name='Top10 Beer Score over time' pane-specification-id='0' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' w='16000' x='83200' y='23250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='15' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='14' param='vert' w='84000' x='8000' y='8000'>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='22250' id='8' mode='checkdropdown' name='Top10 Beer Score over time' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' values='relevant' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Top10 Beer Score over time' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='35500' id='9' name='Top10 Beer Score over time' pane-specification-id='0' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' w='16000' x='83200' y='23250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{0A6B984E-7BF3-4BC5-A254-EBFB92A94FDD}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Beer Score over time'>
+      <cards>
+        <edge name='left'>
+          <strip size='106'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='20'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E404C2E3-F98C-417A-BEB7-F021A41F679B}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Top10 Beer Score over time'>
+      <cards>
+        <edge name='left'>
+          <strip size='106'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='20'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='224'>
+            <card mode='checkdropdown' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' type='filter' values='relevant' />
+            <card pane-specification-id='0' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5CB42830-C5E5-420E-ADC3-C827CCE8590D}' />
+    </window>
+    <window class='worksheet' name='Taste Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[none:beer_name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0a1hd2t05iyqic14ockhx1kzzmb9].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3FCA7A99-71A3-4EB5-9FB1-DBDA724FC056}' />
+    </window>
+    <window class='worksheet' name='Appearance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CD266560-B0F6-4DF1-B5FF-329E258F3080}' />
+    </window>
+    <window class='worksheet' name='Aroma'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C6EF4BB3-33F1-46C0-9785-495DB454E5C2}' />
+    </window>
+    <window class='worksheet' name='Flavor'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{25884E8F-1936-4843-83E1-9F9E8EC8A0B8}' />
+    </window>
+    <window class='worksheet' name='Mouthfeel'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A94940D2-8E0D-4DE2-A187-81368DD8AE9D}' />
+    </window>
+    <window class='dashboard' name='Tastes Boxplot'>
+      <viewpoints>
+        <viewpoint name='Appearance'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Aroma'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Flavor'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Mouthfeel'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{C0267F94-1325-47C3-B85D-A181F14D3AE2}' />
+    </window>
+    <window class='dashboard' name='Beer Score Over Time'>
+      <viewpoints>
+        <viewpoint name='Beer Score over time'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{BD8DBF8C-E8C8-461A-9E3D-D0D0EFBDBC71}' />
+    </window>
+    <window class='dashboard' name='Beer Elements '>
+      <viewpoints>
+        <viewpoint name='Taste Score'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{12D1FD7D-DF71-4518-AB2B-AF67D0BD14B1}' />
+    </window>
+    <window class='dashboard' name='Top10 Beer Score'>
+      <viewpoints>
+        <viewpoint name='Top10 Beer Score over time'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{3FE92EE8-260B-45CA-B8CF-9D4E169CA00F}' />
+    </window>
+    <window class='dashboard' name='Beer Analysis'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{5685E706-55DC-4C86-9E9E-F42395B7DF9D}' />
+    </window>
+  </windows>
+</workbook>
