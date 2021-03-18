@@ -908,6 +908,20 @@ section {
   font-size: 14px;
 }
 
+
+/* #tableau {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+} */
+
+div.myTableauViz {
+  width: 900px;
+  margin-left: 60px;
+  margin-right: auto;
+}
+
 /*--------------------------------------------------------------
 # Our Portfolio
 --------------------------------------------------------------*/

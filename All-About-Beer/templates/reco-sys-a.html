@@ -72,7 +72,7 @@
           <li class="dropdown"><a href="{{ url_for('home') }}#portfolio"><span>Beer Recommendation</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ url_for('recommend_a') }}">Based on Similarity</a></li>
-              <li><a href="{{ url_for('recommend_a') }}">Based on Personal Ratings</a></li>
+              <li><a href="{{ url_for('recommend_b') }}">Based on Personal Ratings</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="{{ url_for('home') }}#team">Team</a></li>
@@ -109,7 +109,7 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-8">
+          <div class="col-lg-7">
             <div class="portfolio-details-slider swiper-container">
               <div class="swiper-wrapper align-items-center">
 
@@ -126,26 +126,52 @@
                 </div> -->
 
               </div>
-              <div class="swiper-pagination"></div>
+              <!-- <div class="swiper-pagination"></div> -->
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-              </ul>
-            </div>
+          <div class="col-lg-5">
+
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>What beer would you like?</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                This recommendation will be based on <strong>similarity between beers</strong>. Please select one of the beers you like and a factor you think the most important between Flavor, Aroma and Mouthfill for beer.
               </p>
             </div>
+
+            <br>
+
+            <div class="portfolio-info">
+              <h3>Select the Options Below.</h3>
+              <ul class="option-groups">
+                <li>
+                  <label for="beer"><strong>Beer  </strong></label><br>
+                        <select id="select-beer">
+                          <option selected="">Choose a beer</option>
+                  </select>
+                </li>
+
+                <br>
+
+                <li>
+                  <label for="taste"><strong>Important Factor  </strong></label><br>
+                        <select id="select-taste">
+                          <option selected="">Choose a factor</option>
+                  </select>
+                </li>
+                <!-- <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li> -->
+              </ul>
+            </div>
+
+            <br>
+
+            <div class="text-center">
+              <a class="btn btn-outline-primary" href="#" role="button">Find me good beers!</a>
+            </div>
+            <!-- <a class="btn btn-outline-primary" href="/scrape" role="button">Scrape New Data</a> -->
+
           </div>
 
         </div>
