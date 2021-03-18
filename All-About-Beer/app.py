@@ -10,10 +10,16 @@ from sqlalchemy import create_engine, func
 from flask import Flask, render_template, jsonify, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
+import numpy as np
+# import pickle
+
 #################################################
 # Flask Setup
 #################################################
 app = Flask(__name__)
+
+# Load the model
+# model = pickle.load(open('model.pkl', 'rb'))
 
 #################################################
 # Database Setup
@@ -64,6 +70,16 @@ def recommend_b():
 
     # show the form, it wasn't submitted
     return render_template('reco-sys-b.html')
+
+# @app.route('/api',methods=['POST'])
+# def predict():
+#     # Get the data from the POST request.
+#     data = request.get_json(force=True)
+#     # Make prediction using model loaded from disk as per the data.
+#     prediction = model.predict([[np.array(data['exp'])]])
+#     # Take the first value of prediction
+#     output = prediction[0]
+#     return jsonify(output)
 
 
 if __name__ == "__main__":
