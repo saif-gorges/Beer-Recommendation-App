@@ -80,3 +80,37 @@ rateList.forEach( rating => dropdown3R.append("option").text(rating) );
 rateList.forEach( rating => dropdown4R.append("option").text(rating) );
 rateList.forEach( rating => dropdown5R.append("option").text(rating) );
 
+
+////////////////////////////// Results ////////////////////////////////
+
+// Recommendation A
+let beerSelected = dropdownMenuB.property("value");
+let factorSelected = dropdownMenuT.property("value");
+
+console.log(beerSelected);
+console.log(factorSelected);
+
+// Recommendation B
+let beerSelected1 = dropdown2B.property("value");
+let beerRate1 = dropdown2R.property("value");
+
+let beerSelected2 = dropdown3B.property("value");
+let beerRate2 = dropdown3R.property("value");
+
+let beerSelected3 = dropdown4B.property("value");
+let beerRate3 = dropdown4R.property("value");
+
+let beerSelected4 = dropdown1B.property("value");
+let beerRate4 = dropdown1R.property("value");
+
+let beerSelected5 = dropdown5B.property("value");
+let beerRate5 = dropdown5R.property("value");
+
+console.log(beerSelected1)
+console.log(beerSelected2)
+
+
+// Select the button
+let filterButton = d3.select("#buttonA");
+
+// filterButton.on("click", function);
