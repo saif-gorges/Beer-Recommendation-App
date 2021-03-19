@@ -47,3 +47,36 @@ let factors = ["Flavor", "Aroma", "Mouthfeel"]
 let dropdownMenuT = d3.select("#select-taste")
 
 factors.forEach( factor => dropdownMenuT.append("option").text(factor) );
+
+
+///////////// Recommendation B //////////////////
+
+let dropdown1B = d3.select("#select-beer1")
+let dropdown1R = d3.select("#rate-beer1")
+
+let dropdown2B = d3.select("#select-beer2")
+let dropdown2R = d3.select("#rate-beer2")
+
+let dropdown3B = d3.select("#select-beer3")
+let dropdown3R = d3.select("#rate-beer3")
+
+let dropdown4B = d3.select("#select-beer4")
+let dropdown4R = d3.select("#rate-beer4")
+
+let dropdown5B = d3.select("#select-beer5")
+let dropdown5R = d3.select("#rate-beer5")
+
+rateList = [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]
+
+beerList.forEach( beer => dropdown1B.append("option").text(beer) );
+beerList.forEach( beer => dropdown2B.append("option").text(beer) );
+beerList.forEach( beer => dropdown3B.append("option").text(beer) );
+beerList.forEach( beer => dropdown4B.append("option").text(beer) );
+beerList.forEach( beer => dropdown5B.append("option").text(beer) );
+
+rateList.forEach( rating => dropdown1R.append("option").text(rating) );
+rateList.forEach( rating => dropdown2R.append("option").text(rating) );
+rateList.forEach( rating => dropdown3R.append("option").text(rating) );
+rateList.forEach( rating => dropdown4R.append("option").text(rating) );
+rateList.forEach( rating => dropdown5R.append("option").text(rating) );
+
