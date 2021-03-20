@@ -55,11 +55,13 @@ def recommend_a():
         factor = request.form["selectedFactor"]
 
         # call from RDS with beer and factors (call using SQLAlchemy)
+        print(beer)
+        print(factor)
 
         # output from  code goes into another table called webapptransactions
 
         # the redirect can be to the same route or somewhere else
-        return redirect(url_for('reco-sys-a')) ## pulls API endpoint that pulls the latestet info from the db
+        return redirect(url_for('recommend_a')) ## pulls API endpoint that pulls the latestet info from the db
 
     # show the form, it wasn't submitted
     return render_template('reco-sys-a.html')
@@ -67,7 +69,7 @@ def recommend_a():
 @app.route('/api/beer')
 def api_index(): 
     # search from webapp transactions latest record 
-    return jsonfity(latest_record)
+    return jsonify(latest_record)
 
 @app.route('/recommend_b', methods=['GET', 'POST'])
 def recommend_b():
