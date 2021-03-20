@@ -114,3 +114,8 @@ console.log(beerSelected2)
 let filterButton = d3.select("#buttonA");
 
 // filterButton.on("click", function);
+
+//Return beer recommendation
+function myFunc(vars) {
+    return vars
+}
