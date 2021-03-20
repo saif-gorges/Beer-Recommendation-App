@@ -51,18 +51,29 @@ def home():
 def recommend_a():
     if request.method == 'POST':
         # do stuff when the form is submitted
+        beer = request.form["beerName"]
+        factor = request.form["selectedFactor"]
 
-        # redirect to end the POST handling
+        # call from RDS with beer and factors (call using SQLAlchemy)
+
+        # output from  code goes into another table called webapptransactions
+
         # the redirect can be to the same route or somewhere else
-        return redirect(url_for('index'))
+        return redirect(url_for('reco-sys-a')) ## pulls API endpoint that pulls the latestet info from the db
 
     # show the form, it wasn't submitted
     return render_template('reco-sys-a.html')
+
+@app.route('/api/beer')
+def api_index(): 
+    # search from webapp transactions latest record 
+    return jsonfity(latest_record)
 
 @app.route('/recommend_b', methods=['GET', 'POST'])
 def recommend_b():
     if request.method == 'POST':
         # do stuff when the form is submitted
+
 
         # redirect to end the POST handling
         # the redirect can be to the same route or somewhere else
@@ -80,6 +91,49 @@ def recommend_b():
 #     # Take the first value of prediction
 #     output = prediction[0]
 #     return jsonify(output)
+
+# Query the database and send the jsonified results
+# @app.route("/send", methods=["GET", "POST"])
+# def send():
+#     if request.method == "POST":
+#         name = request.form["petName"]
+#         lat = request.form["petLat"]
+#         lon = request.form["petLon"]
+
+#         pet = Pet(name=name, lat=lat, lon=lon)
+#         db.session.add(pet)
+#         db.session.commit()
+#         return redirect("/", code=302)
+
+#     return render_template("form.html")
+
+
+# @app.route("/api/pals")
+# def pals():
+#     results = db.session.query(Pet.name, Pet.lat, Pet.lon).all()
+
+#     hover_text = [result[0] for result in results]
+#     lat = [result[1] for result in results]
+#     lon = [result[2] for result in results]
+
+#     pet_data = [{
+#         "type": "scattergeo",
+#         "locationmode": "USA-states",
+#         "lat": lat,
+#         "lon": lon,
+#         "text": hover_text,
+#         "hoverinfo": "text",
+#         "marker": {
+#             "size": 50,
+#             "line": {
+#                 "color": "rgb(8,8,8)",
+#                 "width": 1
+#             },
+#         }
+#     }]
+
+#     return jsonify(pet_data)
+
 
 
 if __name__ == "__main__":

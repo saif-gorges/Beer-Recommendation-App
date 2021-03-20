@@ -147,26 +147,25 @@
 
             <div class="portfolio-info">
               <h3>Select the Options Below.</h3>
-              <ul class="option-groups">
-                <li>
-                  <label for="beer"><strong>Beer  </strong></label><br>
-                        <select id="select-beer">
-                          <option selected="">Choose a beer you like</option>
-                  </select>
-                </li>
+              <form method="POST" action="/send" role="form", name="petform">
+                  <ul class="option-groups">
+                    <li>
+                      <label for="beer"><strong>Beer  </strong></label><br>
+                            <select id="select-beer" name="beerName">
+                              <option selected="">Choose a beer you like</option>
+                      </select>
+                    </li>
 
-                <br>
+                    <br>
 
-                <li>
-                  <label for="taste"><strong>Important Factor  </strong></label><br>
-                        <select id="select-taste">
-                          <option selected="">Choose a factor</option>
-                  </select>
-                </li>
-                <!-- <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li> -->
-              </ul>
+                    <li>
+                      <label for="taste"><strong>Important Factor  </strong></label><br>
+                            <select id="select-taste" name="selectedFactor">
+                              <option selected="">Choose a factor</option>
+                      </select>
+                    </li>
+                  </ul>
+                </form>
             </div>
 
             <br>
