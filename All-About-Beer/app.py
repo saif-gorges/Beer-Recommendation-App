@@ -7,7 +7,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from flask import Flask, render_template, jsonify, request, redirect, url_for, Resource
+from flask import Flask, render_template, jsonify, request, redirect, url_for #, Resource
 from flask_sqlalchemy import SQLAlchemy
 
 import pandas as pd
@@ -40,18 +40,18 @@ app = Flask(__name__)
 # Upload and read CSV using Python Flask
 ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 
-class UploadCSV(Resource):
+# class UploadCSV(Resource):
 
-    def post(self):
-        files = request.files['files']
-        files.save(os.path.join(ROOT_PATH,files.filename))
-        data = pd.read_csv(os.path.koin(ROOT_PATH,files.filename))
-        print(data)
+#     def post(self):
+#         files = request.files['files']
+#         files.save(os.path.join(ROOT_PATH,files.filename))
+#         data = pd.read_csv(os.path.koin(ROOT_PATH,files.filename))
+#         print(data)
 
-api.add_resource(UploadCSV, '/v1/upload')
+# api.add_resource(UploadCSV, '/v1/upload')
 
-if __name__ =='__main__':
-    app.run(host='localhost', debug=True, port=5000)
+# if __name__ =='__main__':
+#     app.run(host='localhost', debug=True, port=5000)
 
 
 # ML
@@ -157,22 +157,30 @@ def recommend_a():
         # call from RDS with beer and factors (call using SQLAlchemy)
         print(beer_name)
         print(factor)
+        # beer_list = pd.read_csv('beer.csv', encoding='utf-8', index_col=0)
+        # ratings = pd.read_csv('.//Ratings.csv', encoding='utf-8')
+        ratings = 7
+        print(ratings)
+        df_aroma = recomm_feature(ratings, 'Aroma')
+        df_flavor = recomm_feature(ratings, 'Flavor')
+        df_mouthfeel = recomm_feature(ratings, 'Mouthfeel')
+        if factor == 'Aroma':
+            df = df_aroma*0.8 + df_flavor*0.1 + df_mouthfeel*0.1
+        if factor == 'Flavor':
+            df = df_aroma*0.1 + df_flavor*0.8 + df_mouthfeel*0.1
+        if factor == 'Mouthfeel':
+            df = df_aroma*0.1 + df_flavor*0.1 + df_mouthfeel*0.8
 
-        # if factor == 'Aroma':
-        #     df = df_aroma*0.8 + df_flavor*0.1 + df_mouthfeel*0.1
-        # if factor == 'Flavor':
-        #     df = df_aroma*0.1 + df_flavor*0.8 + df_mouthfeel*0.1
-        # if factor == 'Mouthfeel':
-        #     df = df_aroma*0.1 + df_flavor*0.1 + df_mouthfeel*0.8
-
-        # result = recomm_beer(df, beer_name)
-        # result = result.index.tolist()
-
+        result = recomm_beer(df, beer_name)
+        result = result.index.tolist()
+        print(result)
+        # return render_template('templates/reco-sys-a.html',result = result)
+        #         {'result':result, 'beer_list':beer_list})
+        # return render_template('templates/reco-sys-a.html',result = result)
         # output from  code goes into another table called webapptransactions
 
         # the redirect can be to the same route or somewhere else
         return redirect(url_for('recommend_a')) ## pulls API endpoint that pulls the latestet info from the db
-
     # show the form, it wasn't submitted
     return render_template('reco-sys-a.html')
 
@@ -184,15 +192,7 @@ def api_index():
 @app.route('/recommend_b', methods=['GET', 'POST'])
 def recommend_b():
     if request.method == 'POST':
-        # do stuff when the form is submitted
-
-
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
-        return redirect(url_for('index'))
-
-    # show the form, it wasn't submitted
-    return render_template('reco-sys-b.html')
+       reco-sys-a.html
 
 # @app.route('/api',methods=['POST'])
 # def predict():
