@@ -182,7 +182,7 @@ def recommend_a():
         # the redirect can be to the same route or somewhere else
         return redirect(url_for('recommend_a')) ## pulls API endpoint that pulls the latestet info from the db
     # show the form, it wasn't submitted
-    return render_template('reco-sys-a.html')
+    return render_template('reco-sys-a.html', result = "Result")
 
 @app.route('/api/beer')
 def api_index(): 
