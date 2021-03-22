@@ -158,8 +158,8 @@ def recommend_a():
         print(beer_name)
         print(factor)
         # beer_list = pd.read_csv('beer.csv', encoding='utf-8', index_col=0)
-        # ratings = pd.read_csv('.//Ratings.csv', encoding='utf-8')
-        ratings = 7
+        #ratings = pd.read_csv('./data/beer_score_by_year_2.csv', encoding='unicode_escape')
+        ratings = pd.read_csv(request.files.get('Ratings.csv'), encoding='unicode_escape')
         print(ratings)
         df_aroma = recomm_feature(ratings, 'Aroma')
         df_flavor = recomm_feature(ratings, 'Flavor')
@@ -179,7 +179,7 @@ def recommend_a():
         # return render_template('templates/reco-sys-a.html',result = result)
         # output from  code goes into another table called webapptransactions
 
-        # the redirect can be to the same route or somewhere else
+              # the redirect can be to the same route or somewhere else
         return redirect(url_for('recommend_a')) ## pulls API endpoint that pulls the latestet info from the db
     # show the form, it wasn't submitted
     return render_template('reco-sys-a.html', result = "Result")
