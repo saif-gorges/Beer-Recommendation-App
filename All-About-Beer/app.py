@@ -7,7 +7,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from flask import Flask, render_template, jsonify, request, redirect, url_for
+from flask import Flask, render_template, jsonify, request, redirect, url_for, Resource
 from flask_sqlalchemy import SQLAlchemy
 
 import pandas as pd
@@ -36,6 +36,23 @@ app = Flask(__name__)
 # Ethnicity = Base.classes.ethnicity
 # Restaurant = Base.classes.restaurant
 # NeighbourhoodRestaurant = Base.classes.neighbourhood_restaurant
+
+# Upload and read CSV using Python Flask
+ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
+
+class UploadCSV(Resource):
+
+    def post(self):
+        files = request.files['files']
+        files.save(os.path.join(ROOT_PATH,files.filename))
+        data = pd.read_csv(os.path.koin(ROOT_PATH,files.filename))
+        print(data)
+
+api.add_resource(UploadCSV, '/v1/upload')
+
+if __name__ =='__main__':
+    app.run(host='localhost', debug=True, port=5000)
+
 
 # ML
 import json
