@@ -6,9 +6,10 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-
+import psycopg2
 from flask import Flask, render_template, jsonify, request, redirect, url_for #, Resource
 from flask_sqlalchemy import SQLAlchemy
+#from tensorflow.keras.models import load_model
 
 import pandas as pd
 import numpy as np
@@ -25,8 +26,14 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-# engine = create_engine('postgres://njvrdjyvjmdbff:8574a3313def94cb7b048ef3496350a723d4ebcbb2ae1a709d66a79eab0112fe@ec2-54-211-77-238.compute-1.amazonaws.com:5432/d7ne1s21u49i5u')
-
+server = "beers-data.cgl0jpbw6pfo.ca-central-1.rds.amazonaws.com"
+database = "beers-data"
+port = "5432"
+username = "root"
+password = "teamawesome"
+conn = f"postgres://{username}:{password}@{server}:{port}/{database}"
+engine = create_engine(conn, echo=False)
+#engine = create_engine('postgres://njvrdjyvjmdbff:8574a3313def94cb7b048ef3496350a723d4ebcbb2ae1a709d66a79eab0112fe@ec2-54-211-77-238.compute-1.amazonaws.com:5432/d7ne1s21u49i5u')
 # Base = automap_base()
 # Base.prepare(engine, reflect=True)
 
@@ -159,7 +166,7 @@ def recommend_a():
         print(factor)
         # beer_list = pd.read_csv('beer.csv', encoding='utf-8', index_col=0)
         #ratings = pd.read_csv('./data/beer_score_by_year_2.csv', encoding='unicode_escape')
-        ratings = pd.read_csv(request.files.get('Ratings.csv'), encoding='unicode_escape')
+        ratings = pd.read_csv("./All-About-Beer/data/final_data.csv", encoding='unicode_escape',index_col=0)
         print(ratings)
         df_aroma = recomm_feature(ratings, 'Aroma')
         df_flavor = recomm_feature(ratings, 'Flavor')
