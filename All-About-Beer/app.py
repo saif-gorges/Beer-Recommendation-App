@@ -214,23 +214,37 @@ def recommend_b():
 
     if request.method == 'POST':
         # do stuff when the form is submitted
-        beer_1 = request.form["beer1"]
-        rate_1 = request.form["rate1"]
+        # beer_1 = request.form["beer1"]
+        # rate_1 = request.form["rate1"]
 
-        beer_2 = request.form["beer2"]
-        rate_2 = request.form["rate2"]
+        # beer_2 = request.form["beer2"]
+        # rate_2 = request.form["rate2"]
 
-        beer_3 = request.form["beer3"]
-        rate_3 = request.form["rate3"]
+        # beer_3 = request.form["beer3"]
+        # rate_3 = request.form["rate3"]
 
-        beer_4 = request.form["beer4"]
-        rate_4 = request.form["rate4"]
+        # beer_4 = request.form["beer4"]
+        # rate_4 = request.form["rate4"]
 
-        beer_5 = request.form["beer5"]
-        rate_5 = request.form["rate5"]
+        # beer_5 = request.form["beer5"]
+        # rate_5 = request.form["rate5"]
 
-        #test
-        print(beer_1, rate_1, beer_2, rate_2, beer_3, rate_3, beer_4, rate_4, beer_5, rate_5)
+        # #test
+        # print(beer_1, rate_1, beer_2, rate_2, beer_3, rate_3, beer_4, rate_4, beer_5, rate_5)
+
+        beer = []
+        rating = []
+
+        for i in range(1, 6):
+            beer_name = request.form[f"beer{i}"]
+            beer.append(beer_name)
+            rate = request.form[f"rate{i}"]
+            rating.append(rate)
+
+        print(beer)
+        print(rating)
+
+
 
         # for i in range(len(beer)):
         #     tmp = []
@@ -288,11 +302,11 @@ def recommend_b():
         #     target_rating = target['grade'].tolist()
         #     tmp_year.append(target_year)
         #     tmp_ratings.append(target_rating)                                   
-        beer_result = {
-            'beer_name': result
-            }
-        print(beer_result)
-        return render_template('reco-sys-b-result.html', beer_result=beer_result)
+        # beer_result = {
+        #     'beer_name': result
+        #     }
+        # print(beer_result)
+        # return render_template('reco-sys-b-result.html', beer_result=beer_result)
     return render_template('reco-sys-b.html')
 
 # @app.route('/api',methods=['POST'])
