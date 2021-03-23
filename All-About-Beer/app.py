@@ -181,6 +181,17 @@ def recommend_a():
         result = recomm_beer(df, beer_name)
         result = result.index.tolist()
         print(result)
+        # Initialize the list for the dictionary of beer names
+        beer_names_recommended = []
+        for beer in result:
+        # Used a Python dictionary to store the data
+            temp = {}
+            temp['beer'] = beer
+            print(temp)
+        # Appended each beer names info to the list
+            beer_names_recommended.append(temp)
+            beer_names_recommended
+        return beer_names_recommended
         # return render_template('templates/reco-sys-a.html',result = result)
         #         {'result':result, 'beer_list':beer_list})
         # return render_template('templates/reco-sys-a.html',result = result)
