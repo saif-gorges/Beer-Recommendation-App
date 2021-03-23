@@ -210,6 +210,17 @@ def api_index():
 
 @app.route('/recommend_b', methods=['GET', 'POST'])
 def recommend_b():
+    beer_list = pd.read_csv('./All-About-Beer/data/final_data/beer_name_1.csv', encoding='utf-8', index_col=0)
+    beer_year = pd.read_csv('./All-About-Beer/data/final_data/beer_score_by_year_2.csv', encoding='utf-8', index_col=0)
+    ratings = pd.read_csv("./All-About-Beer/data/final_data/final_data_3.csv", encoding='unicode_escape',index_col=0)
+    cluster_3 = pd.read_csv("./All-About-Beer/data/final_data/clustering_by_cluster_4.csv", encoding='unicode_escape',index_col=0)
+    cluster_all = pd.read_csv("./All-About-Beer/data/final_data/clustering_all_beer_5.csv", encoding='unicode_escape',index_col=0)
+    print(beer_list)
+    # beer_list = beer_list['beer_name']
+    # print(beer_list)
+    cluster_3 = cluster_3.values
+    print(cluster_3)
+
     if request.method == 'POST':
         # do stuff when the form is submitted
         beer_1 = request.form["beer1"]
