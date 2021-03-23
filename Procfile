@@ -1,1 +1,1 @@
-web: gunicorn Toronto-Analysis-Heroku.app:app
+web: gunicorn beer-recommendation-app.app:app
