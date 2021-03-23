@@ -232,66 +232,66 @@ def recommend_b():
         #test
         print(beer_1, rate_1, beer_2, rate_2, beer_3, rate_3, beer_4, rate_4, beer_5, rate_5)
 
-        for i in range(1,6):
-            beer.append(request.POST.get('beer'+str(i), ''))
-            rating.append((request.POST.get('rating'+str(i), '')))
+        # for i in range(1,6):
+        #     beer.append(request.POST.get('beer'+str(i), ''))
+        #     rating.append((request.POST.get('rating'+str(i), '')))
 
-        for i in range(len(beer)):
-            tmp = []
-            tmp.append(name)
-            tmp.append(beer[i])
-            tmp.append(float(rating[i]))
-            tmp = pd.DataFrame(data=[tmp], columns=['user','beer_name','rating'])
-            ratings = pd.concat([ratings, tmp])
+        # for i in range(len(beer)):
+        #     tmp = []
+        #     tmp.append(name)
+        #     tmp.append(beer[i])
+        #     tmp.append(float(rating[i]))
+        #     tmp = pd.DataFrame(data=[tmp], columns=['user','beer_name','rating'])
+        #     ratings = pd.concat([ratings, tmp])
 
-        uname = name
-        ratings_matrix = ratings.pivot_table('Rating', index='user', columns='beer_name')
-        ratings_matrix = ratings_matrix.fillna(0)
-        ratings_matrix_T = ratings_matrix.transpose()
+        # uname = name
+        # ratings_matrix = ratings.pivot_table('Rating', index='user', columns='beer_name')
+        # ratings_matrix = ratings_matrix.fillna(0)
+        # ratings_matrix_T = ratings_matrix.transpose()
 
-        item_sim = cosine_similarity(ratings_matrix_T, ratings_matrix_T)
-        item_sim_df = pd.DataFrame(data=item_sim, index=ratings_matrix.columns,
-                                   columns=ratings_matrix.columns)
-        # Only users similar to top_n are used for recommendation.
-        ratings_pred = predict_rating_topsim(ratings_matrix.values, item_sim_df.values, n=5)
-        # The calculated predicted score data is recreated as a DataFrame.
-        ratings_pred_matrix = pd.DataFrame(data=ratings_pred, index=ratings_matrix.index,
-                                           columns=ratings_matrix.columns)   
+        # item_sim = cosine_similarity(ratings_matrix_T, ratings_matrix_T)
+        # item_sim_df = pd.DataFrame(data=item_sim, index=ratings_matrix.columns,
+        #                            columns=ratings_matrix.columns)
+        # # Only users similar to top_n are used for recommendation.
+        # ratings_pred = predict_rating_topsim(ratings_matrix.values, item_sim_df.values, n=5)
+        # # The calculated predicted score data is recreated as a DataFrame.
+        # ratings_pred_matrix = pd.DataFrame(data=ratings_pred, index=ratings_matrix.index,
+        #                                    columns=ratings_matrix.columns)   
 
-        # 유저가 먹지 않은 맥주이름 추출
-        not_tried = get_not_tried_beer(ratings_matrix, uname)
-        # 아이템 기반의 최근접 이웃 CF로 맥주 추천
-        recomm_beer = recomm_beer_by_userid(ratings_pred_matrix, uname, not_tried, top_n=3)
-        recomm_beer = pd.DataFrame(data=recomm_beer.values, index=recomm_beer.index,
-                                   columns=['예측평점'])
-        # 추천 결과로 나온 맥주이름만 추출
-        result = recomm_beer.index.tolist()
+        # # 유저가 먹지 않은 맥주이름 추출
+        # not_tried = get_not_tried_beer(ratings_matrix, uname)
+        # # 아이템 기반의 최근접 이웃 CF로 맥주 추천
+        # recomm_beer = recomm_beer_by_userid(ratings_pred_matrix, uname, not_tried, top_n=3)
+        # recomm_beer = pd.DataFrame(data=recomm_beer.values, index=recomm_beer.index,
+        #                            columns=['예측평점'])
+        # # 추천 결과로 나온 맥주이름만 추출
+        # result = recomm_beer.index.tolist()
 
-        # 클러스터링 결과
-        tmp_cluster = []
-        category = []
-        food = []
-        for i in range(3):
-            target = cluster_all[cluster_all['맥주'] == result[i]]
-            target = target[['Aroma', 'Appearance', 'Flavor', 'Mouthfeel', 'Overall']]
-            target = target.values[0]
-            tmp_cluster.append(target)
+        # # 클러스터링 결과
+        # tmp_cluster = []
+        # category = []
+        # food = []
+        # for i in range(3):
+        #     target = cluster_all[cluster_all['맥주'] == result[i]]
+        #     target = target[['Aroma', 'Appearance', 'Flavor', 'Mouthfeel', 'Overall']]
+        #     target = target.values[0]
+        #     tmp_cluster.append(target)
 
-            try :
-                category.append(beer_data[beer_data['beer_name']==result[i]]['Main Category'].values[0])
-                food.append(beer_data[beer_data['beer_name']==result[i]]['Paring Food'].values[0])
-            except :
-                category.append('Not collected')
-                food.append('Not collected')
+        #     try :
+        #         category.append(beer_data[beer_data['beer_name']==result[i]]['Main Category'].values[0])
+        #         food.append(beer_data[beer_data['beer_name']==result[i]]['Paring Food'].values[0])
+        #     except :
+        #         category.append('Not collected')
+        #         food.append('Not collected')
 
-        tmp_year = []
-        tmp_ratings = []
-        for i in range(3):
-            target = beer_year[beer_year['beer_name'] == result[i]]
-            target_year = target['year'].tolist()
-            target_rating = target['grade'].tolist()
-            tmp_year.append(target_year)
-            tmp_ratings.append(target_rating)                                   
+        # tmp_year = []
+        # tmp_ratings = []
+        # for i in range(3):
+        #     target = beer_year[beer_year['beer_name'] == result[i]]
+        #     target_year = target['year'].tolist()
+        #     target_rating = target['grade'].tolist()
+        #     tmp_year.append(target_year)
+        #     tmp_ratings.append(target_rating)                                   
 
         return redirect(url_for('recommend_b')) 
 
