@@ -181,9 +181,15 @@
 
         </div>
             <div class="beer-recommendation">
-              <h2>Your beer recommendation is: {{ result }} </h2>
-
-
+              <h2>Your beer recommendation is: 
+                <ul>
+                {% for each in result %} 
+                <li>{{ each }}}</li> 
+                {% else %}
+                <li>no beers right now...</li>
+                {% endfor %}
+              </ul>
+              </h2>
             </div>
       </div>
     </section><!-- End Portfolio Details Section -->
