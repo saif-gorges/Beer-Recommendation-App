@@ -189,9 +189,10 @@ def recommend_a():
             temp['beer'] = beer
             print(temp)
         # Appended each beer names info to the list
-            beer_names_recommended.append(temp)
-            beer_names_recommended
-        return beer_names_recommended
+            # beer_names_recommended.append(temp)
+            # beer_names_recommended
+        # return beer_names_recommended
+        return temp
         # return render_template('templates/reco-sys-a.html',result = result)
         #         {'result':result, 'beer_list':beer_list})
         # return render_template('templates/reco-sys-a.html',result = result)
@@ -200,7 +201,7 @@ def recommend_a():
               # the redirect can be to the same route or somewhere else
         return redirect(url_for('recommend_a')) ## pulls API endpoint that pulls the latestet info from the db
     # show the form, it wasn't submitted
-    return render_template('reco-sys-a.html', result = "Result")
+    return render_template('reco-sys-a.html', result = "temp")
 
 @app.route('/api/beer')
 def api_index(): 
