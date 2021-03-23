@@ -9,7 +9,7 @@ from sqlalchemy import create_engine, func
 import psycopg2
 from flask import Flask, render_template, jsonify, request, redirect, url_for #, Resource
 from flask_sqlalchemy import SQLAlchemy
-from flask_pymongo import PyMongo
+#from flask_pymongo import PyMongo
 #from tensorflow.keras.models import load_model
 
 import pandas as pd
