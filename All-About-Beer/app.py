@@ -178,30 +178,31 @@ def recommend_a():
         if factor == 'Mouthfeel':
             df = df_aroma*0.1 + df_flavor*0.1 + df_mouthfeel*0.8
 
-        result = recomm_beer(df, beer_name)
-        result = result.index.tolist()
-        print(result)
+        results = recomm_beer(df, beer_name)
+        results = results.index.tolist()
+        print(results)
         # Initialize the list for the dictionary of beer names
-        beer_names_recommended = []
-        for beer in result:
+        #beer_names_recommended = []
+        for beer in results:
         # Used a Python dictionary to store the data
-            temp = {}
-            temp['beer'] = beer
-            print(temp)
+            result = {}
+            result['beer'] = beer
+            print(result)
         # Appended each beer names info to the list
             # beer_names_recommended.append(temp)
             # beer_names_recommended
-        # return beer_names_recommended
-        return temp
+        #return beer_names_recommended
+        return result
         # return render_template('templates/reco-sys-a.html',result = result)
         #         {'result':result, 'beer_list':beer_list})
         # return render_template('templates/reco-sys-a.html',result = result)
         # output from  code goes into another table called webapptransactions
-
+        # return jsonify(beer_names_recommended)
+        # return str(beer_names_recommended)
               # the redirect can be to the same route or somewhere else
-        return redirect(url_for('recommend_a')) ## pulls API endpoint that pulls the latestet info from the db
+        #return redirect(url_for('recommend_a')) ## pulls API endpoint that pulls the latestet info from the db
     # show the form, it wasn't submitted
-    return render_template('reco-sys-a.html', result = "temp")
+    return render_template('reco-sys-a.html', result = "result")
 
 @app.route('/api/beer')
 def api_index(): 
