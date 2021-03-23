@@ -1,1 +1,1 @@
-FLASK_APP=Toronto-Analysis-Heroku/app.py flask run
+FLASK_APP=All-About-Beer/app.py flask run
