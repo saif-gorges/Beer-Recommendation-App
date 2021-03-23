@@ -9,6 +9,7 @@ from sqlalchemy import create_engine, func
 import psycopg2
 from flask import Flask, render_template, jsonify, request, redirect, url_for #, Resource
 from flask_sqlalchemy import SQLAlchemy
+from flask_pymongo import PyMongo
 #from tensorflow.keras.models import load_model
 
 import pandas as pd
@@ -19,6 +20,8 @@ import numpy as np
 # Flask Setup
 #################################################
 app = Flask(__name__)
+
+mongo = PyMongo(app, uri="mongodb://localhost:27017/beer_db")
 
 # Load the model
 # model = pickle.load(open('model.pkl', 'rb'))
@@ -183,16 +186,30 @@ def recommend_a():
         print(results)
         # Initialize the list for the dictionary of beer names
         #beer_names_recommended = []
-        for beer in results:
-        # Used a Python dictionary to store the data
-            result = {}
-            result['beer'] = beer
-            print(result)
+        # for beer in results:
+        # # Used a Python dictionary to store the data
+        #     result = {}
+        #     result['beer'] = beer
+        #     print(result)
+
+        result_dict = {
+            'beer_name': results
+        }
+
+        print(result_dict)
+
+        # Update the Mongo database using update and upsert=True
+        mongo.db.recommendation_a.update({}, result_dict, upsert=True)
         # Appended each beer names info to the list
             # beer_names_recommended.append(temp)
             # beer_names_recommended
+        beer_data = mongo.db.recommendation_a.find_one()
+
+        print(beer_data)
         #return beer_names_recommended
-        return result
+        # return result
+        return render_template('reco-sys-a-result.html', beer_data=beer_data)
+
         # return render_template('templates/reco-sys-a.html',result = result)
         #         {'result':result, 'beer_list':beer_list})
         # return render_template('templates/reco-sys-a.html',result = result)
@@ -202,7 +219,7 @@ def recommend_a():
               # the redirect can be to the same route or somewhere else
         #return redirect(url_for('recommend_a')) ## pulls API endpoint that pulls the latestet info from the db
     # show the form, it wasn't submitted
-    return render_template('reco-sys-a.html', result = "result")
+    return render_template('reco-sys-a.html')
 
 @app.route('/api/beer')
 def api_index(): 
