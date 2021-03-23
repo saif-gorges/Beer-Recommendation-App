@@ -166,11 +166,11 @@ def recommend_a():
         print(factor)
         # beer_list = pd.read_csv('beer.csv', encoding='utf-8', index_col=0)
         #ratings = pd.read_csv('./data/beer_score_by_year_2.csv', encoding='unicode_escape')
-        ratings = pd.read_csv("./All-About-Beer/data/final_data.csv", encoding='unicode_escape',index_col=0)
+        ratings = pd.read_csv("./All-About-Beer/data/final_data/final_data_3.csv", encoding='unicode_escape',index_col=0)
         print(ratings)
-        df_aroma = recomm_feature(ratings, 'Aroma')
-        df_flavor = recomm_feature(ratings, 'Flavor')
-        df_mouthfeel = recomm_feature(ratings, 'Mouthfeel')
+        df_aroma = recomm_feature(ratings, 'aroma')
+        df_flavor = recomm_feature(ratings, 'flavor')
+        df_mouthfeel = recomm_feature(ratings, 'mouthfeel')
         if factor == 'Aroma':
             df = df_aroma*0.8 + df_flavor*0.1 + df_mouthfeel*0.1
         if factor == 'Flavor':
