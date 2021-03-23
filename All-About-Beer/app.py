@@ -293,7 +293,7 @@ def recommend_b():
         #     tmp_year.append(target_year)
         #     tmp_ratings.append(target_rating)                                   
 
-        return redirect(url_for('recommend_b')) 
+        return render_template('reco-sys-b-result.html', beer_data=beer_data)
 
     return render_template('reco-sys-b.html')
 
