@@ -232,10 +232,6 @@ def recommend_b():
         #test
         print(beer_1, rate_1, beer_2, rate_2, beer_3, rate_3, beer_4, rate_4, beer_5, rate_5)
 
-        # for i in range(1,6):
-        #     beer.append(request.POST.get('beer'+str(i), ''))
-        #     rating.append((request.POST.get('rating'+str(i), '')))
-
         # for i in range(len(beer)):
         #     tmp = []
         #     tmp.append(name)
@@ -258,16 +254,16 @@ def recommend_b():
         # ratings_pred_matrix = pd.DataFrame(data=ratings_pred, index=ratings_matrix.index,
         #                                    columns=ratings_matrix.columns)   
 
-        # # 유저가 먹지 않은 맥주이름 추출
+        # # Extracting the beer name that the user did not tasted
         # not_tried = get_not_tried_beer(ratings_matrix, uname)
-        # # 아이템 기반의 최근접 이웃 CF로 맥주 추천
+        # # Recommended beer as an item-based nearest neighbor CF
         # recomm_beer = recomm_beer_by_userid(ratings_pred_matrix, uname, not_tried, top_n=3)
         # recomm_beer = pd.DataFrame(data=recomm_beer.values, index=recomm_beer.index,
-        #                            columns=['예측평점'])
-        # # 추천 결과로 나온 맥주이름만 추출
+        #                            columns=['Prediction score'])
+        # # Extract only the beer name from the recommendation
         # result = recomm_beer.index.tolist()
 
-        # # 클러스터링 결과
+        # # Clustering results
         # tmp_cluster = []
         # category = []
         # food = []
@@ -292,10 +288,11 @@ def recommend_b():
         #     target_rating = target['grade'].tolist()
         #     tmp_year.append(target_year)
         #     tmp_ratings.append(target_rating)                                   
-
-        return redirect(url_for('recommend_b')) 
-
-    return render_template('reco-sys-b.html')
+        beer_result = {
+            'beer_name': result
+            }
+        print(beer_result)
+        return render_template('reco-sys-b-result.html', beer_result=beer_result)
 
 # @app.route('/api',methods=['POST'])
 # def predict():
