@@ -1,1 +1,1 @@
-web: gunicorn beer-recommendation-app.app:app
+web: gunicorn All-About-Beer.app:app
