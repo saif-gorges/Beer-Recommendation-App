@@ -10,11 +10,9 @@ import psycopg2
 from flask import Flask, render_template, jsonify, request, redirect, url_for #, Resource
 from flask_sqlalchemy import SQLAlchemy
 #from flask_pymongo import PyMongo
-#from tensorflow.keras.models import load_model
 
 import pandas as pd
 import numpy as np
-# import pickle
 
 #################################################
 # Flask Setup
@@ -160,17 +158,20 @@ def home():
 @app.route('/recommend_a', methods=['GET', 'POST'])
 def recommend_a():
     if request.method == 'POST':
-        # do stuff when the form is submitted
+        # Receives input from the front from POST
         beer_name = request.form["beerName"]
         factor = request.form["selectedFactor"]
 
         # call from RDS with beer and factors (call using SQLAlchemy)
+        #Print the results from POST
         print(beer_name)
         print(factor)
-        # beer_list = pd.read_csv('beer.csv', encoding='utf-8', index_col=0)
-        #ratings = pd.read_csv('./data/beer_score_by_year_2.csv', encoding='unicode_escape')
+
+        # Read Beer-Ratings file which has User's Aroma, Flavor, Mouthfeel ratings
         ratings = pd.read_csv("./All-About-Beer/data/final_data/final_data_3.csv", encoding='unicode_escape',index_col=0)
         print(ratings)
+        
+        # Calculate the logic corresponding to the recommendation system using recomm_feature defined function.
         df_aroma = recomm_feature(ratings, 'aroma')
         df_flavor = recomm_feature(ratings, 'flavor')
         df_mouthfeel = recomm_feature(ratings, 'mouthfeel')
@@ -184,39 +185,13 @@ def recommend_a():
         results = recomm_beer(df, beer_name)
         results = results.index.tolist()
         print(results)
-        # Initialize the list for the dictionary of beer names
-        #beer_names_recommended = []
-        # for beer in results:
-        # # Used a Python dictionary to store the data
-        #     result = {}
-        #     result['beer'] = beer
-        #     print(result)
 
+        # Initialize the list for the dictionary of beer names
         beer_data = {
             'beer_name': results
         }
-
-        #print(result_dict)
-
-        # Update the Mongo database using update and upsert=True
-        #mongo.db.recommendation_a.update({}, result_dict, upsert=True)
-        # Appended each beer names info to the list
-            # beer_names_recommended.append(temp)
-            # beer_names_recommended
-        #beer_data = mongo.db.recommendation_a.find_one()
-
         print(beer_data)
-        #return beer_names_recommended
-        # return result
         return render_template('reco-sys-a-result.html', beer_data=beer_data)
-
-        
-        # output from  code goes into another table called webapptransactions
-        # return jsonify(beer_names_recommended)
-        # return str(beer_names_recommended)
-              # the redirect can be to the same route or somewhere else
-        #return redirect(url_for('recommend_a')) ## pulls API endpoint that pulls the latestet info from the db
-    # show the form, it wasn't submitted
     return render_template('reco-sys-a.html')
 
 @app.route('/api/beer')
