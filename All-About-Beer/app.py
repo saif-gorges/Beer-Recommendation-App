@@ -21,7 +21,7 @@ import numpy as np
 #################################################
 app = Flask(__name__)
 
-mongo = PyMongo(app, uri="mongodb://localhost:27017/beer_db")
+#mongo = PyMongo(app, uri="mongodb://localhost:27017/beer_db")
 
 # Load the model
 # model = pickle.load(open('model.pkl', 'rb'))
@@ -192,27 +192,25 @@ def recommend_a():
         #     result['beer'] = beer
         #     print(result)
 
-        result_dict = {
+        beer_data = {
             'beer_name': results
         }
 
-        print(result_dict)
+        #print(result_dict)
 
         # Update the Mongo database using update and upsert=True
-        mongo.db.recommendation_a.update({}, result_dict, upsert=True)
+        #mongo.db.recommendation_a.update({}, result_dict, upsert=True)
         # Appended each beer names info to the list
             # beer_names_recommended.append(temp)
             # beer_names_recommended
-        beer_data = mongo.db.recommendation_a.find_one()
+        #beer_data = mongo.db.recommendation_a.find_one()
 
         print(beer_data)
         #return beer_names_recommended
         # return result
         return render_template('reco-sys-a-result.html', beer_data=beer_data)
 
-        # return render_template('templates/reco-sys-a.html',result = result)
-        #         {'result':result, 'beer_list':beer_list})
-        # return render_template('templates/reco-sys-a.html',result = result)
+        
         # output from  code goes into another table called webapptransactions
         # return jsonify(beer_names_recommended)
         # return str(beer_names_recommended)
