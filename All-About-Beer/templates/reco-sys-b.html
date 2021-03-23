@@ -148,13 +148,14 @@
 
             <div class="portfolio-info">
               <h3>Select the Options Below.</h3>
+              <form method="POST" action="/recommend_b" role="form", name="petform">
               <ul class="option-groups">
                 <li>
                   <label for="beer1"><strong>Beer 1  </strong></label><br>
-                      <select id="select-beer1">
+                      <select id="select-beer1" name="beer1">
                           <option selected="">Choose a beer</option>
                        </select>
-                       <select id="rate-beer1">
+                       <select id="rate-beer1" name="rate1">
                           <option selected="">Rating</option>
                        </select>
                 </li>
@@ -163,10 +164,10 @@
 
                 <li>
                   <label for="beer2"><strong>Beer 2  </strong></label><br>
-                      <select id="select-beer2">
+                      <select id="select-beer2" name="beer2">
                           <option selected="">Choose a beer</option>
                        </select>
-                       <select id="rate-beer2">
+                       <select id="rate-beer2" name="rate2">
                           <option selected="">Rating</option>
                        </select>
                 </li>
@@ -175,10 +176,10 @@
 
                 <li>
                   <label for="beer3"><strong>Beer 3  </strong></label><br>
-                      <select id="select-beer3">
+                      <select id="select-beer3" name="beer3">
                           <option selected="">Choose a beer</option>
                        </select>
-                       <select id="rate-beer3">
+                       <select id="rate-beer3" name="rate3">
                           <option selected="">Rating</option>
                        </select>
                 </li>
@@ -187,10 +188,10 @@
 
                 <li>
                   <label for="beer4"><strong>Beer 4  </strong></label><br>
-                      <select id="select-beer4">
+                      <select id="select-beer4" name="beer4">
                           <option selected="">Choose a beer</option>
                        </select>
-                       <select id="rate-beer4">
+                       <select id="rate-beer4" name="rate4">
                           <option selected="">Rating</option>
                        </select>
                 </li>
@@ -199,10 +200,10 @@
 
                 <li>
                   <label for="beer5"><strong>Beer 5  </strong></label><br>
-                      <select id="select-beer5">
+                      <select id="select-beer5" name="beer5">
                           <option selected="">Choose a beer</option>
                        </select>
-                       <select id="rate-beer5">
+                       <select id="rate-beer5" name="rate5">
                           <option selected="">Rating</option>
                        </select>
                 </li>
@@ -216,8 +217,11 @@
             <br>
 
             <div class="text-center">
-              <a class="btn btn-outline-primary" href="#" role="button">Find me good beers!</a>
+              <!-- <input id="buttonA" type="submit" class="btn btn-outline-primary" href="#" role="button">Find me good beers!</a> -->
+              <input id="buttonB" type="submit" class="btn btn-outline-primary" value="Find me good beers!">
             </div>
+
+          </form>
             <!-- <a class="btn btn-outline-primary" href="/scrape" role="button">Scrape New Data</a> -->
 
           </div>

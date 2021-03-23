@@ -212,7 +212,28 @@ def api_index():
 @app.route('/recommend_b', methods=['GET', 'POST'])
 def recommend_b():
     if request.method == 'POST':
-       reco-sys-a.html
+        # do stuff when the form is submitted
+        beer_1 = request.form["beer1"]
+        rate_1 = request.form["rate1"]
+
+        beer_2 = request.form["beer2"]
+        rate_2 = request.form["rate2"]
+
+        beer_3 = request.form["beer3"]
+        rate_3 = request.form["rate3"]
+
+        beer_4 = request.form["beer4"]
+        rate_4 = request.form["rate4"]
+
+        beer_5 = request.form["beer5"]
+        rate_5 = request.form["rate5"]
+
+        #test
+        print(beer_1, rate_1, beer_2, rate_2, beer_3, rate_3, beer_4, rate_4, beer_5, rate_5)
+
+        return redirect(url_for('recommend_b')) 
+
+    return render_template('reco-sys-b.html')
 
 # @app.route('/api',methods=['POST'])
 # def predict():
