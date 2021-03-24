@@ -22,13 +22,13 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-server = "beers-data.cgl0jpbw6pfo.ca-central-1.rds.amazonaws.com"
-database = "beers-data"
-port = "5432"
-username = "root"
-password = "teamawesome"
-conn = f"postgres://{username}:{password}@{server}:{port}/{database}"
-engine = create_engine(conn, echo=False)
+# server = "beers-data.cgl0jpbw6pfo.ca-central-1.rds.amazonaws.com"
+# database = "beers-data"
+# port = "5432"
+# username = "root"
+# password = "teamawesome"
+# conn = f"postgres://{username}:{password}@{server}:{port}/{database}"
+# engine = create_engine(conn, echo=False)
 
 # Upload and read CSV using Python Flask
 ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -186,8 +186,8 @@ def api_index():
 
 @app.route('/recommend_b', methods=['GET', 'POST'])
 def recommend_b():
-    beer_list = pd.read_csv('./All-About-Beer/data/final_data/beer_name_1.csv', encoding='utf-8', index_col=0)
-    ratings = pd.read_csv("./All-About-Beer/data/final_data/final_data_3.csv", encoding='unicode_escape',index_col=0)
+
+    ratings = pd.read_csv("./All-About-Beer/data/final_data/final_data_3Copy.csv", encoding='unicode_escape',index_col=0)
 
     if request.method == 'POST':
         # do stuff when the form is submitted
@@ -218,6 +218,7 @@ def recommend_b():
         item_sim = cosine_similarity(ratings_matrix_T, ratings_matrix_T)
         item_sim_df = pd.DataFrame(data=item_sim, index=ratings_matrix.columns,
                                    columns=ratings_matrix.columns)
+        
         # Only users similar to top_n are used for recommendation.
         ratings_pred = predict_rating_topsim(ratings_matrix.values, item_sim_df.values, n=5)
         # The calculated predicted score data is recreated as a DataFrame.
@@ -233,18 +234,12 @@ def recommend_b():
                                    columns=['Prediction score'])
         # Extract only the beer name from the recommendation
         result = recomm_beer.index.tolist()  
-
         beer_result = {
             'beer_name': result
             }
-
-
         # print(beer_result)
         return render_template('reco-sys-b-result.html', beer_result=beer_result)
-
     return render_template('reco-sys-b.html')
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
