@@ -19,11 +19,6 @@ import numpy as np
 #################################################
 app = Flask(__name__)
 
-#mongo = PyMongo(app, uri="mongodb://localhost:27017/beer_db")
-
-# Load the model
-# model = pickle.load(open('model.pkl', 'rb'))
-
 #################################################
 # Database Setup
 #################################################
@@ -34,16 +29,6 @@ username = "root"
 password = "teamawesome"
 conn = f"postgres://{username}:{password}@{server}:{port}/{database}"
 engine = create_engine(conn, echo=False)
-#engine = create_engine('postgres://njvrdjyvjmdbff:8574a3313def94cb7b048ef3496350a723d4ebcbb2ae1a709d66a79eab0112fe@ec2-54-211-77-238.compute-1.amazonaws.com:5432/d7ne1s21u49i5u')
-# Base = automap_base()
-# Base.prepare(engine, reflect=True)
-
-# Save references to each table
-# Income = Base.classes.income
-# Crime = Base.classes.crime
-# Ethnicity = Base.classes.ethnicity
-# Restaurant = Base.classes.restaurant
-# NeighbourhoodRestaurant = Base.classes.neighbourhood_restaurant
 
 # Upload and read CSV using Python Flask
 ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -202,15 +187,7 @@ def api_index():
 @app.route('/recommend_b', methods=['GET', 'POST'])
 def recommend_b():
     beer_list = pd.read_csv('./All-About-Beer/data/final_data/beer_name_1.csv', encoding='utf-8', index_col=0)
-    beer_year = pd.read_csv('./All-About-Beer/data/final_data/beer_score_by_year_2.csv', encoding='utf-8', index_col=0)
     ratings = pd.read_csv("./All-About-Beer/data/final_data/final_data_3.csv", encoding='unicode_escape',index_col=0)
-    cluster_3 = pd.read_csv("./All-About-Beer/data/final_data/clustering_by_cluster_4.csv", encoding='unicode_escape',index_col=0)
-    cluster_all = pd.read_csv("./All-About-Beer/data/final_data/clustering_all_beer_5.csv", encoding='unicode_escape',index_col=0)
-    #print(beer_list)
-    # beer_list = beer_list['beer_name']
-    # print(beer_list)
-    cluster_3 = cluster_3.values
-    #print(cluster_3)
 
     if request.method == 'POST':
         # do stuff when the form is submitted
@@ -223,9 +200,6 @@ def recommend_b():
             beer.append(beer_name)
             rate = request.form[f"rate{i}"]
             rating.append(rate)
-
-        # print(beer)
-        # print(rating)
 
         for i in range(len(beer)):
             tmp = []
@@ -258,33 +232,7 @@ def recommend_b():
         recomm_beer = pd.DataFrame(data=recomm_beer.values, index=recomm_beer.index,
                                    columns=['Prediction score'])
         # Extract only the beer name from the recommendation
-        result = recomm_beer.index.tolist()
-
-        # # Clustering results
-        # tmp_cluster = []
-        # category = []
-        # food = []
-        # for i in range(3):
-        #     target = cluster_all[cluster_all['맥주'] == result[i]]
-        #     target = target[['Aroma', 'Appearance', 'Flavor', 'Mouthfeel', 'Overall']]
-        #     target = target.values[0]
-        #     tmp_cluster.append(target)
-
-        #     try :
-        #         category.append(beer_data[beer_data['beer_name']==result[i]]['Main Category'].values[0])
-        #         food.append(beer_data[beer_data['beer_name']==result[i]]['Paring Food'].values[0])
-        #     except :
-        #         category.append('Not collected')
-        #         food.append('Not collected')
-
-        # tmp_year = []
-        # tmp_ratings = []
-        # for i in range(3):
-        #     target = beer_year[beer_year['beer_name'] == result[i]]
-        #     target_year = target['year'].tolist()
-        #     target_rating = target['grade'].tolist()
-        #     tmp_year.append(target_year)
-        #     tmp_ratings.append(target_rating)    
+        result = recomm_beer.index.tolist()  
 
         beer_result = {
             'beer_name': result
@@ -295,58 +243,6 @@ def recommend_b():
         return render_template('reco-sys-b-result.html', beer_result=beer_result)
 
     return render_template('reco-sys-b.html')
-
-# @app.route('/api',methods=['POST'])
-# def predict():
-#     # Get the data from the POST request.
-#     data = request.get_json(force=True)
-#     # Make prediction using model loaded from disk as per the data.
-#     prediction = model.predict([[np.array(data['exp'])]])
-#     # Take the first value of prediction
-#     output = prediction[0]
-#     return jsonify(output)
-
-# Query the database and send the jsonified results
-# @app.route("/send", methods=["GET", "POST"])
-# def send():
-#     if request.method == "POST":
-#         name = request.form["petName"]
-#         lat = request.form["petLat"]
-#         lon = request.form["petLon"]
-
-#         pet = Pet(name=name, lat=lat, lon=lon)
-#         db.session.add(pet)
-#         db.session.commit()
-#         return redirect("/", code=302)
-
-#     return render_template("form.html")
-
-
-# @app.route("/api/pals")
-# def pals():
-#     results = db.session.query(Pet.name, Pet.lat, Pet.lon).all()
-
-#     hover_text = [result[0] for result in results]
-#     lat = [result[1] for result in results]
-#     lon = [result[2] for result in results]
-
-#     pet_data = [{
-#         "type": "scattergeo",
-#         "locationmode": "USA-states",
-#         "lat": lat,
-#         "lon": lon,
-#         "text": hover_text,
-#         "hoverinfo": "text",
-#         "marker": {
-#             "size": 50,
-#             "line": {
-#                 "color": "rgb(8,8,8)",
-#                 "width": 1
-#             },
-#         }
-#     }]
-
-#     return jsonify(pet_data)
 
 
 
