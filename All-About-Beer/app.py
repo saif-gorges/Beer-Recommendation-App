@@ -214,28 +214,11 @@ def recommend_b():
 
     if request.method == 'POST':
         # do stuff when the form is submitted
-        # beer_1 = request.form["beer1"]
-        # rate_1 = request.form["rate1"]
-
-        # beer_2 = request.form["beer2"]
-        # rate_2 = request.form["rate2"]
-
-        # beer_3 = request.form["beer3"]
-        # rate_3 = request.form["rate3"]
-
-        # beer_4 = request.form["beer4"]
-        # rate_4 = request.form["rate4"]
-
-        # beer_5 = request.form["beer5"]
-        # rate_5 = request.form["rate5"]
-
-        # #test
-        # print(beer_1, rate_1, beer_2, rate_2, beer_3, rate_3, beer_4, rate_4, beer_5, rate_5)
-
         beer = []
         rating = []
 
         for i in range(1, 6):
+            name = request.form["name"]
             beer_name = request.form[f"beer{i}"]
             beer.append(beer_name)
             rate = request.form[f"rate{i}"]
@@ -244,38 +227,38 @@ def recommend_b():
         print(beer)
         print(rating)
 
+        for i in range(len(beer)):
+            tmp = []
+            tmp.append(name)
+            tmp.append(beer[i])
+            tmp.append(float(rating[i]))
+            tmp = pd.DataFrame(data=[tmp], columns=['user','beer_name','rating'])
+            # tmp = pd.DataFrame(data=[tmp], columns=['beer_name','rating'])
+            ratings = pd.concat([ratings, tmp])
 
+        uname = name
+        ratings_matrix = ratings.pivot_table('rating', index='user', columns='beer_name')
+        ratings_matrix = ratings_matrix.fillna(0)
+        ratings_matrix_T = ratings_matrix.transpose()
 
-        # for i in range(len(beer)):
-        #     tmp = []
-        #     tmp.append(name)
-        #     tmp.append(beer[i])
-        #     tmp.append(float(rating[i]))
-        #     tmp = pd.DataFrame(data=[tmp], columns=['user','beer_name','rating'])
-        #     ratings = pd.concat([ratings, tmp])
+        item_sim = cosine_similarity(ratings_matrix_T, ratings_matrix_T)
+        item_sim_df = pd.DataFrame(data=item_sim, index=ratings_matrix.columns,
+                                   columns=ratings_matrix.columns)
+        # Only users similar to top_n are used for recommendation.
+        ratings_pred = predict_rating_topsim(ratings_matrix.values, item_sim_df.values, n=5)
+        # The calculated predicted score data is recreated as a DataFrame.
+        ratings_pred_matrix = pd.DataFrame(data=ratings_pred, index=ratings_matrix.index,
+                                           columns=ratings_matrix.columns)   
 
-        # uname = name
-        # ratings_matrix = ratings.pivot_table('Rating', index='user', columns='beer_name')
-        # ratings_matrix = ratings_matrix.fillna(0)
-        # ratings_matrix_T = ratings_matrix.transpose()
+        # Extracting the beer name that the user did not tasted
+        not_tried = get_not_tried_beer(ratings_matrix, uname)
 
-        # item_sim = cosine_similarity(ratings_matrix_T, ratings_matrix_T)
-        # item_sim_df = pd.DataFrame(data=item_sim, index=ratings_matrix.columns,
-        #                            columns=ratings_matrix.columns)
-        # # Only users similar to top_n are used for recommendation.
-        # ratings_pred = predict_rating_topsim(ratings_matrix.values, item_sim_df.values, n=5)
-        # # The calculated predicted score data is recreated as a DataFrame.
-        # ratings_pred_matrix = pd.DataFrame(data=ratings_pred, index=ratings_matrix.index,
-        #                                    columns=ratings_matrix.columns)   
-
-        # # Extracting the beer name that the user did not tasted
-        # not_tried = get_not_tried_beer(ratings_matrix, uname)
-        # # Recommended beer as an item-based nearest neighbor CF
-        # recomm_beer = recomm_beer_by_userid(ratings_pred_matrix, uname, not_tried, top_n=3)
-        # recomm_beer = pd.DataFrame(data=recomm_beer.values, index=recomm_beer.index,
-        #                            columns=['Prediction score'])
-        # # Extract only the beer name from the recommendation
-        # result = recomm_beer.index.tolist()
+        # Recommended beer as an item-based nearest neighbor CF
+        recomm_beer = recomm_beer_by_userid(ratings_pred_matrix, uname, not_tried, top_n=3)
+        recomm_beer = pd.DataFrame(data=recomm_beer.values, index=recomm_beer.index,
+                                   columns=['Prediction score'])
+        # Extract only the beer name from the recommendation
+        result = recomm_beer.index.tolist()
 
         # # Clustering results
         # tmp_cluster = []
@@ -301,12 +284,16 @@ def recommend_b():
         #     target_year = target['year'].tolist()
         #     target_rating = target['grade'].tolist()
         #     tmp_year.append(target_year)
-        #     tmp_ratings.append(target_rating)                                   
-        # beer_result = {
-        #     'beer_name': result
-        #     }
-        # print(beer_result)
-        # return render_template('reco-sys-b-result.html', beer_result=beer_result)
+        #     tmp_ratings.append(target_rating)    
+
+        beer_result = {
+            'beer_name': result
+            }
+
+
+        print(beer_result)
+        return render_template('reco-sys-b-result.html', beer_result=beer_result)
+
     return render_template('reco-sys-b.html')
 
 # @app.route('/api',methods=['POST'])

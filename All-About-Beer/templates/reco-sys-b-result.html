@@ -150,11 +150,6 @@
               <h3>Select the Options Below.</h3>
               <form method="POST" action="/recommend_b" role="form", name="petform">
               <ul class="option-groups">
-                
-                <li>
-                  <label for="user">User Id (Optional)</label>
-                  <input class="form-control" id="userid" type="text" placeholder="Optional" name="name">
-                </li>
                 <li>
                   <label for="beer1"><strong>Beer 1  </strong></label><br>
                       <select id="select-beer1" name="beer1">
@@ -230,6 +225,21 @@
             <!-- <a class="btn btn-outline-primary" href="/scrape" role="button">Scrape New Data</a> -->
 
           </div>
+
+          <div class="beer-recommendation">
+              <h2><b>Your Beer Recommendation:</b></h2>
+                      <ul>
+                        <li>
+                         <b> {{beer_result.beer_name[0]}} </b>
+                        </li>
+                        <li>
+                        <b> {{beer_result.beer_name[1]}} </b>
+                        </li>
+                        <li>
+                        <b>{{beer_result.beer_name[2]}}</b>
+                        </li>
+                      </ul>
+            </div>
 
         </div>
 
