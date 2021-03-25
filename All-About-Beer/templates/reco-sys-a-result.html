@@ -237,7 +237,7 @@
 
     <div id='myDiv'></div>
     <script>
-      var data = beer_data
+      JSON.parse({{ targetJson }})
       data = [
       {
         type: 'scatterpolar',
@@ -282,7 +282,7 @@
         }
       },
       title: {
-        text:'추천 맥주 클러스터 유형',
+        text:'Recommend Beer Clustering Type',
         font: {
           size: 24
         },

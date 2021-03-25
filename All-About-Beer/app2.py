@@ -7,6 +7,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 import psycopg2
+import json
 from flask import Flask, render_template, jsonify, request, redirect, url_for #, Resource
 from flask_sqlalchemy import SQLAlchemy
 #from flask_pymongo import PyMongo
@@ -22,30 +23,10 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-# server = "beers-data.cgl0jpbw6pfo.ca-central-1.rds.amazonaws.com"
-# database = "beers-data"
-# port = "5432"
-# username = "root"
-# password = "teamawesome"
-# conn = f"postgres://{username}:{password}@{server}:{port}/{database}"
-# engine = create_engine(conn, echo=False)
-
 # Upload and read CSV using Python Flask
-ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
-
-# class UploadCSV(Resource):
-
-#     def post(self):
-#         files = request.files['files']
-#         files.save(os.path.join(ROOT_PATH,files.filename))
-#         data = pd.read_csv(os.path.koin(ROOT_PATH,files.filename))
-#         print(data)
-
-# api.add_resource(UploadCSV, '/v1/upload')
 
 # if __name__ =='__main__':
 #     app.run(host='localhost', debug=True, port=5000)
-
 
 # ML
 import json
@@ -159,7 +140,10 @@ def recommend_a():
         # Read files for clustering 
         cluster_all = pd.read_csv("./All-About-Beer/data/final_data/clustering_all_beer_5.csv", encoding='unicode_escape',index_col=0)
         cluster_3 = pd.read_csv("./All-About-Beer/data/final_data/clustering_by_cluster_4.csv", encoding='unicode_escape',index_col=0)
+        cluster_3 = cluster_3.values
+
         
+
         # Calculate the logic corresponding to the recommendation system using recomm_feature defined function.
         df_aroma = recomm_feature(ratings, 'aroma')
         df_flavor = recomm_feature(ratings, 'flavor')
@@ -180,7 +164,7 @@ def recommend_a():
         #category=[]
         
         for i in range(3):
-            target = cluster_all[cluster_all['beer_name']==result[i]]
+            target = cluster_all[cluster_all['beer_name']==results[i]]
             target = target[['Aroma', 'Appearance', 'Flavor', 'Mouthfeel', 'Overall']]
             target = target.values[0]
             tmp_cluster.append(target)
@@ -200,10 +184,13 @@ def recommend_a():
             'cluster1': cluster_3[0].tolist(),
             'cluster2': cluster_3[1].tolist(),
             'cluster3': cluster_3[2].tolist()
-
         }
+
+        print(beer_data)
+
+        targetJson = json.dumps(beer_data)
         #print(beer_data)
-        return render_template('reco-sys-a-result.html', beer_data=beer_data)
+        return render_template('reco-sys-a-result.html', targetJson=targetJson, beer_data=beer_data)
     return render_template('reco-sys-a.html')
 
 @app.route('/api/beer')
