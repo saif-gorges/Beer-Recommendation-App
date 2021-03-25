@@ -23,7 +23,7 @@ let beerList = ["San Miguel", "Newcastle Brown Ale (Non-US Version)", "Rickard's
 "Paulaner Oktoberfest Bier (Wiesn Bier)", "Great Lakes Brewery Canuck Pale Ale", "DAB Original", "Pilsner Urquell",
 "Guinness Draught", "Tsingtao Beer Quality Series (Taiwan)", "Stella Artois", "Bud Light", "Heineken", "Michelob Ultra",
 "Waterloo IPA", "Goose Island IPA Now", "Alexander Keith's India Pale Ale", "Chang Beer",
-"Kona Big Wave Golden Ale", "Beck's", "Budweiser", " Hoegaarden RosÃ©e", "MacKinnon Brothers Red Fox", "Corona Extra",
+"Kona Big Wave Golden Ale", "Beck's", "Budweiser", "MacKinnon Brothers Red Fox", "Corona Extra",
 "Maisel & Friends Marc's Chocolate Bock", "Krombacher Pils", "BrewDog Weihenstephan India Pale Weizen", "Flying Monkeys 12 Minutes to Destiny",
 "Steam Whistle Pilsner", "Peroni", "Tiger Beer", "Moosehead Pale Ale", "Sleeman Clear 2.0", "Zubr", "Baltika 7 Eksportnoe (Export)",
 "Midnight Sun M", "Toppling Goliath Kentucky Brunch", "Superstition Berry White", "NÃƒÂ¤rke Kaggen Stormaktsporter",
