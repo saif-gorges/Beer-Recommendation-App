@@ -35,7 +35,7 @@ Our purpose is twofold: to create a recommender system of something fun for othe
   * Rate Beer Website User Reviews 
   
   ## <a name="data-sources"></a> Architectural Diagram
-  ![beer-app-ad](./)
+  ![beer-app-ad](./All-About-Beer/static/img/slide/Beer Recommendation App.jpg)
   
   ## 🔭 ETL Process
   ### Extract
