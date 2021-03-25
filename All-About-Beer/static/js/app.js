@@ -22,20 +22,20 @@ let beerList = ["San Miguel", "Newcastle Brown Ale (Non-US Version)", "Rickard's
 "Berthold Keller Premium Lager", "Creemore Springs Premium Lager", "Erdinger Weissbier", "Harp Lager",
 "Paulaner Oktoberfest Bier (Wiesn Bier)", "Great Lakes Brewery Canuck Pale Ale", "DAB Original", "Pilsner Urquell",
 "Guinness Draught", "Tsingtao Beer Quality Series (Taiwan)", "Stella Artois", "Bud Light", "Heineken", "Michelob Ultra",
-"Waterloo IPA", "Goose Island IPA Now", "Alexander Keith's India Pale Ale", "Kozel CernÃ½ (Dark)", "Chang Beer",
-"Kona Big Wave Golden Ale", "Beck's", "Budweiser", " Hoegaarden RosÃ©e", "MacKinnon Brothers Red Fox", "Corona Extra",
-"Maisel & Friends Marc's Chocolate Bock", "Krombacher Pils", "BrewDog / Weihenstephan India Pale Weizen", "Flying Monkeys 12 Minutes to Destiny",
+"Waterloo IPA", "Goose Island IPA Now", "Alexander Keith's India Pale Ale", "Chang Beer",
+"Kona Big Wave Golden Ale", "Beck's", "Budweiser", "MacKinnon Brothers Red Fox", "Corona Extra",
+"Maisel & Friends Marc's Chocolate Bock", "Krombacher Pils", "BrewDog Weihenstephan India Pale Weizen", "Flying Monkeys 12 Minutes to Destiny",
 "Steam Whistle Pilsner", "Peroni", "Tiger Beer", "Moosehead Pale Ale", "Sleeman Clear 2.0", "Zubr", "Baltika 7 Eksportnoe (Export)",
-"Midnight Sun M", "Toppling Goliath Kentucky Brunch", "Superstition Berry White", "NÃƒÂ¤rke Kaggen Stormaktsporter",
+"Midnight Sun M", "Toppling Goliath Kentucky Brunch", "Superstition Berry White",
 "Bavaria 8.6 (Original)", "The Twisted Hop Tears... in Rain: Glitter in the Dark", "Bud Light Apple", "Bud Light Lime",
 "Boxer Ice", "Molson Carling Light", "Estrella Damm (5.4%)", "Cantillon Vin Jaune", "Dos Equis XX Special Lager",
 "Dragon Stout", "Innis & Gunn The Original", "Kirin Ichiban", "Mad Jack Apple Lager", "Mickeys Fine Malt Liquor",
-"Old Milwaukee", "Bellwoods Jelly King (Raspberry and Blackberry)", "Unibroue La Fin du Monde", "Sapporo Premium Beer / Draft Beer",
+"Old Milwaukee", "Bellwoods Jelly King (Raspberry and Blackberry)", "Unibroue La Fin du Monde", "Sapporo Premium Beer or Draft Beer",
 "Wissey Valley Golden Rivet", "Caledon Hills Helles", "Wellington Special Pale Ale SPA", "Kronenbourg 1664 Blanc",
 "Smithwick's Ale / Draught", "Nickel Brook Glory & Gold", "Miller Lite", "Shawn & Ed Lagershed Original", "Walkerville Classic Amber Lager",
-"Muskoka Mad Tom IPA", "Four Winds Nectarous", "Dieu du Ciel! PÃ©chÃ© Mortel (Bourbon)", "Driftwood Sartori Harvest IPA",
+"Muskoka Mad Tom IPA", "Four Winds Nectarous", "Driftwood Sartori Harvest IPA",
 "Unibroue Trois Pistoles", "Bellwoods Bring Out Your Dead", "Driftwood Fat Tug IPA", "Hoegaarden Grand Cru",
-"Unibroue 17 Grande RÃ©serve (Rhum & Cognac)"]
+"Unibroue 17 Grande Réserve (Rhum & Cognac)"]
 
 beerList.forEach( beer => dropdownMenuB.append("option").text(beer) );
 

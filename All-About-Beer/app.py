@@ -194,7 +194,14 @@ def recommend_b():
         beer = []
         rating = []
 
-        for i in range(1, 6):
+        # for i in range(1, 6):
+        #     name = request.form["name"]
+        #     beer_name = request.form[f"beer{i}"]
+        #     beer.append(beer_name)
+        #     rate = request.form[f"rate{i}"]
+        #     rating.append(rate)
+
+        for i in range(1, 4):
             name = request.form["name"]
             beer_name = request.form[f"beer{i}"]
             beer.append(beer_name)

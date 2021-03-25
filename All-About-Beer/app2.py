@@ -189,7 +189,7 @@ def recommend_a():
         print(beer_data)
 
         targetJson = json.dumps(beer_data)
-        #print(beer_data)
+
         return render_template('reco-sys-a-result.html', targetJson=targetJson, beer_data=beer_data)
     return render_template('reco-sys-a.html')
 
