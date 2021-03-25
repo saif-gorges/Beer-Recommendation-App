@@ -26,7 +26,7 @@ let beerList = ["San Miguel", "Newcastle Brown Ale (Non-US Version)", "Rickard's
 "Kona Big Wave Golden Ale", "Beck's", "Budweiser", "MacKinnon Brothers Red Fox", "Corona Extra",
 "Maisel & Friends Marc's Chocolate Bock", "Krombacher Pils", "BrewDog Weihenstephan India Pale Weizen", "Flying Monkeys 12 Minutes to Destiny",
 "Steam Whistle Pilsner", "Peroni", "Tiger Beer", "Moosehead Pale Ale", "Sleeman Clear 2.0", "Zubr", "Baltika 7 Eksportnoe (Export)",
-"Midnight Sun M", "Toppling Goliath Kentucky Brunch", "Superstition Berry White", "NÃƒÂ¤rke Kaggen Stormaktsporter",
+"Midnight Sun M", "Toppling Goliath Kentucky Brunch", "Superstition Berry White",
 "Bavaria 8.6 (Original)", "The Twisted Hop Tears... in Rain: Glitter in the Dark", "Bud Light Apple", "Bud Light Lime",
 "Boxer Ice", "Molson Carling Light", "Estrella Damm (5.4%)", "Cantillon Vin Jaune", "Dos Equis XX Special Lager",
 "Dragon Stout", "Innis & Gunn The Original", "Kirin Ichiban", "Mad Jack Apple Lager", "Mickeys Fine Malt Liquor",
