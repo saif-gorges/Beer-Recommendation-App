@@ -237,7 +237,11 @@
 
     <div id='myDiv'></div>
     <script>
-      JSON.parse({{ targetJson }})
+      // var data = JSON.parse('{{ targetJason|safe }}')
+      // console.log(data);
+
+      var data = JSON.parse('{{ targetJason|safe }}');
+
       data = [
       {
         type: 'scatterpolar',
