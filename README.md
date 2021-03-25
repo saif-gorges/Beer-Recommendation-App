@@ -1,9 +1,8 @@
 # Beer Recommendation App
-# Exploring Toronto Neighborhoods - to open a new Restaurant
 
 **Submitted By:** Dong Yi Kim | Saif Gorges | Saloni Gupta | Sooyeon Kim </br>
 _Date_: March, 25th, 2021\
-EDA & Machine Learning Project- **Beer Recommendation Web Application** <br/>
+EDA & Machine Learning Project - **Beer Recommendation Web Application** <br/>
 
 ![beer readme1](./All-About-Beer/static/img/slide/slide2.jpg)
 
