@@ -183,12 +183,7 @@
             <!-- <a class="btn btn-outline-primary" href="/scrape" role="button">Scrape New Data</a> -->
 
         </div>
-        <div class="beer-recommendation">
-          <!-- <h2><strong>Your Beer Recommendation:</strong></h2><hr>
-            <h3><strong>Best Match:</strong> {{beer_data.beer_name[0]}}</h3>
-            <br>
-            <h3><strong>You may also like:</strong></h3>
-            <h4>{{beer_data.beer_name[1]}} and {{beer_data.beer_name[2]}}</h4> -->
+        <!-- <div class="beer-recommendation">
             <h2><b>Your Beer Recommendation:</b></h2>
                     <ul>
                       <li>
@@ -201,7 +196,7 @@
                       <b>{{beer_data.beer_name[2]}}</b>
                       </li>
                     </ul>
-          </div>
+          </div> -->
       </div>
     </section><!-- End Portfolio Details Section -->
 
@@ -237,7 +232,7 @@
 
     <div id='myDiv'></div>
     <script>
-      var data = JSON.parse('{{ targetJson|safe }}')
+      var data = JSON.parse(({{ targetJason|safe }}))
 
       console.log(data);
 
