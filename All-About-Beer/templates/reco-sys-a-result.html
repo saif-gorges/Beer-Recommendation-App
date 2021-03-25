@@ -237,10 +237,11 @@
 
     <div id='myDiv'></div>
     <script>
-      // var data = JSON.parse('{{ targetJason|safe }}')
-      // console.log(data);
+      var data = JSON.parse('{{ targetJson|safe }}')
 
-      var data = JSON.parse('{{ targetJason|safe }}');
+      console.log(data);
+
+      console.log(data.cluster3)
 
       data = [
       {
