@@ -11,50 +11,25 @@ Find the completed Toronto New Restaurant Analysis dashboard here: [Beer Recomme
 
 ## Table of Contents
   * [Overview](#overview)
-  * [Data Sources](#data-sources)
-  * [Exploratory Data Analysis](#eda)
-  * [Machine Learning](#machine-learning)
-    * [Item-Based CF](#item-based)
-    * [User-Based CF](#user-based)
+  * [Methods of Recommendation](#machine-learning)
+    * [Similarity-Based CF](#similarity-based)
+    * [User-Based CF](#ratings-based)
   * [Technologies](#technologies)
 
 ## <a name="overview"></a>Overview
-Do you like beer? Do your friends like beer? Do you like making your friends feel bad about their choice of beer? Well look no further, we have the solution for you!
-Our state-of-the-art beer recommendation app will tell you and your friends which beers to drink, so you can stop arguing about beer and just enjoy the night!
-Using Machine Learning technology, our system will source hundred beers and recommend you the best beer for your taste based on aroma, appearance, flavour and texture. 
-Now you don’t have to ask anybody for their "human" recommendations!
+This project aims to deliver personalized beer recommendations to beer lovers across the country. Our final product consists of web scraped data, item-based collaborative filtering models using nearest neighbor collaborative filtering and latent factor collaborative filtering, all packed into an interactive Flask web-application. Our purpose is twofold: to create a recommender system of something fun for others to use and in the process learn how to build a complex recommender system.
+  
+## <a name="machine-learning"></a>Methods of Recommendation
 
-Our goal was to celebrate the end of graduation with a nice cold one. What better way to choose a beer than to get a machine learning alogorithm to do it for us?
-Our recommender system, aims to deliver personalized recommendations to beer lovers across the country. Our final product consists of web scraped data, item-based collaborative filtering models using nearest neighbor collaborative filtering and latent factor collaborative filtering, all packed into an interactive Flask web-application. 
-Our purpose is twofold: to create a recommender system of something fun for others to use and in the process learn how to build a complex recommender system.
-  
-  
-  ## <a name="data-sources"></a>Data Sources
-  
- Datasets Sources:   
-  * Rate Beer Website User Reviews 
-  
-  ## <a name="data-sources"></a> Architectural Diagram
-  ![beer-app-ad](./All-About-Beer/static/img/slide/Beer Recommendation App.jpg)
-  
-  ## 🔭 ETL Process
-  ### Extract
-  
-  ### Transform
-  Data cleaned and transformed by using Python Jupyter Notebook - [Transform.ipynb](./All-About-Beer/data/Transform.ipynb).
-  ### Load
+#### <a name="similarity-based"></a>Based on Similarity
+This recommendation will be based on similarity between beers. Select one of the beers you like and a factor you think is the most important between flavor, aroma and texture for the beer. 
 
-  ## <a name="machine-learning"></a>Machine Learning
+#### <a name="ratings-based"></a>Based on Ratings
+This recommendation will be based on your ratings for three beers that you choose to rate. Select three beers you know and rate them - ratings can be between 1 to 5. 
 
-  
-  ## <a name="final-proposal"></a>Fianl Proposal
 
-  
- ## Over All layout
-![project overall](./)
-
- ## Deployment
- This app is deployed public on Heroku App, click the following link to see how it looks like [Beer Recommendation App](https://beer-recommendation-app.herokuapp.com/)
+## Deployment
+This app is deployed publicly on Heroku, click [here](https://beer-recommendation-app.herokuapp.com/) to check it out!
  
  
 ## <a name="technologies">Technologies</a>
